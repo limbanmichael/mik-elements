@@ -1,0 +1,41 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+
+    --font-family-default: 'Source Sans Pro', sans-serif;
+
+    --primary-color: #1800fc;
+    --secondary-color: #00cc00;
+    
+    --tertiary-color: #33caca;
+    --button-bg-hover-tertiary: #8bbdbd;
+
+    --small-size-width: 80px;
+    --small-size-height: 30px;
+    --small-size-font-size: 12px;
+    --small-size-font-weight: normal;
+
+
+    --medium-size-width: 90px;
+    --medium-size-height: 32px;
+    --medium-size-font-size: 14px;
+    --medium-size-font-weight: normal;
+
+    --large-size-width: 100px;
+    --large-size-height: 34px;
+    --large-size-font-size: 14px;
+    --large-size-font-weight: normal;
+
+    --xl-size-width: 120px;
+    --xl-size-height: 38px;
+    --xl-size-font-size: 15px;
+    --xl-size-font-weight: normal;
+
+    --xxl-size-width: 140px;
+    --xxl-size-height: 42px;
+    --xxl-size-font-size: 16px;
+    --xxl-size-font-weight: normal;
+}
+
+mik-card {
+    background-color: green;
+}

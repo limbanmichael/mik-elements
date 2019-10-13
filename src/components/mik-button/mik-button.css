@@ -1,0 +1,55 @@
+.primary {
+  background-color: var(--primary-color);
+}
+.secondary {
+  background-color: var(--secondary-color);
+}
+.tertiary {
+  background-color: var(--tertiary-color);
+}
+
+.small {
+  width: var(--small-size-width);
+  height: var(--small-size-height);
+  font-size: var(--small-size-font-size);
+  font-weight: var(--small-size-font-weight);
+}
+.medium {
+  width: var(--medium-size-width);
+  height: var(--medium-size-height);
+  font-size: var(--medium-size-font-size);
+  font-weight: var(--medium-size-font-weight);
+}
+.large {
+  width: var(--large-size-width);
+  height: var(--large-size-height);
+  font-size: var(--large-size-font-size);
+  font-weight: var(--large-size-font-weight);
+}
+.xl {
+  width: var(--xl-size-width);
+  height: var(--xl-size-height);
+  font-size: var(--xl-size-font-size);
+  font-weight: var(--xl-size-font-weight);
+}
+.xxl {
+  width: var(--xxl-size-width);
+  height: var(--xxl-size-height);
+  font-size: var(--xxl-size-font-size);
+  font-weight: var(--xxl-size-font-weight);
+}
+
+.is-radius {
+  border-radius: 20px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-family: var(--font-family-default);
+}
+
+button:hover {
+  background-color: var(--button-bg-hover-tertiary);
+}
