@@ -13,6 +13,7 @@ export class MikIcon {
     @Prop() mikIconCustomColor: string;
     @Prop() mikIconIndentLeft: string;
     @Prop() mikIconIndentTop: string;
+    @Prop() mikIconClassButtonSize: string;
 
     componentDidLoad() {
         this.el.shadowRoot.querySelector('span')
@@ -35,7 +36,12 @@ export class MikIcon {
             success: this.mikIconColor === 'success',
             error: this.mikIconColor === 'error',
             'indent-left': this.mikIconIndentLeft !== null,
-            'indent-top': this.mikIconIndentTop !== null
+            'indent-top': this.mikIconIndentTop !== null,
+            small: this.mikIconClassButtonSize === 'small',
+            medium: this.mikIconClassButtonSize === 'medium',
+            large: this.mikIconClassButtonSize === 'large',
+            xl: this.mikIconClassButtonSize === 'xl',
+            xxl: this.mikIconClassButtonSize === 'xxl'
         };
 
         return (
