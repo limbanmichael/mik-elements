@@ -31,7 +31,10 @@ export class MyComponent {
         >
         </mik-card> */}
         
-        {/* <mik-button
+        <mik-button
+          mikButtonIcon="edit"
+          mikButtonIconCustomColor="white"
+          mikButtonIconIndentLeft="3px"
           mikButtonRadius={this.makeRound}
           mikButtonSize="small"
           mikButtonColor="tertiary"
@@ -42,6 +45,9 @@ export class MyComponent {
         </mik-button>
         <br /><br /><br />
         <mik-button
+          mikButtonIcon="build"
+          mikButtonIconCustomColor="white"
+          mikButtonIconIndentLeft="3px"
           mikButtonRadius={this.makeRound}
           mikButtonSize="medium"
           mikButtonColor="tertiary"
@@ -49,12 +55,12 @@ export class MyComponent {
           mikButtonDisabled={this.buttonDisable}
         >
           Medium
-        </mik-button> */}
+        </mik-button>
         <br/><br/><br/>
         <mik-button
-          mikButtonIcon="phone"
+          mikButtonIcon="backup"
           mikButtonIconCustomColor="white"
-          mikButtonIconIndentLeft="3px"
+          // mikButtonIconIndentLeft="3px"
           mikButtonRadius={this.makeRound}
           mikButtonSize="large"
           mikButtonColor="primary"
@@ -72,7 +78,7 @@ export class MyComponent {
           mikButtonDisabled={this.buttonDisable}
           mikButtonIcon="phone"
           mikButtonIconCustomColor="white"
-          mikButtonIconIndentLeft="3px"
+          // mikButtonIconIndentLeft="3px"
         >
           Extra large
         </mik-button>
@@ -85,7 +91,7 @@ export class MyComponent {
           mikButtonDisabled={this.buttonDisable}
           mikButtonIcon="save"
           mikButtonIconCustomColor="white"
-          mikButtonIconIndentLeft="3px"
+          // mikButtonIconIndentLeft="3px"
         >
 
           XX Large

@@ -42,3 +42,13 @@
     margin-right: 3px;
     vertical-align: middle;
 }
+.mik-icon.medium {
+    font-size: 18px;
+    margin-right: 3px;
+    vertical-align: middle;
+}
+.mik-icon.small {
+    font-size: 17px;
+    margin-right: 3px;
+    vertical-align: middle;
+}
