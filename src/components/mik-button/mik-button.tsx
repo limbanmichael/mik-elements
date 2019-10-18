@@ -134,6 +134,7 @@ export class MikButton {
             >
                 {this.mikButtonIcon ?
                     <mik-icon
+                        mikIconClassButtonSize={this.mikButtonSize}
                         mikIcon={this.mikButtonIcon}
                         mikIconCustomColor={this.mikButtonIconCustomColor}
                         mikIconIndentLeft={this.mikButtonIconIndentLeft}

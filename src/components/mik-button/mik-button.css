@@ -69,6 +69,11 @@ button {
 
 .withButtonIcon-xxl span {
     position: relative;
+    font-size: 17px;
+    vertical-align: middle;
+}
+
+.withButtonIcon-xl span {
+    position: relative;
     top: -6px;
-    left: -9px;
 }

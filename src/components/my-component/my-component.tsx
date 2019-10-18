@@ -31,7 +31,7 @@ export class MyComponent {
         >
         </mik-card> */}
         
-        <mik-button
+        {/* <mik-button
           mikButtonRadius={this.makeRound}
           mikButtonSize="small"
           mikButtonColor="tertiary"
@@ -67,9 +67,12 @@ export class MyComponent {
           mikButtonColor="secondary"
           buttonClick={this.testButton}
           mikButtonDisabled={this.buttonDisable}
+          mikButtonIcon="done"
+          mikButtonIconCustomColor="white"
+          mikButtonIconIndentLeft="3px"
         >
           Extra large
-        </mik-button>
+        </mik-button> */}
         <br /><br /><br />
         <mik-button
           mikButtonRadius={this.makeRound}
@@ -77,12 +80,12 @@ export class MyComponent {
           mikButtonColor="tertiary"
           buttonClick={this.testButton}
           mikButtonDisabled={this.buttonDisable}
-          mikButtonIcon="done"
+          mikButtonIcon="save"
           mikButtonIconCustomColor="white"
           mikButtonIconIndentLeft="3px"
         >
-          
-          XX large
+
+          XX Large
         </mik-button>
         {/* <br /><br /><br />
         <mik-button
