@@ -18,12 +18,6 @@
 .material-icons.icon-custom-color {
   color: var(--mik-icon-custom-color);
 }
-/* .material-icons.indent-left {
-  margin-left: var(--mik-icon-custom-indent-left);
-}
-.material-icons.indent-top {
-  margin-top: var(--mik-icon-custom-indent-top);
-} */
 .primary {
   color: var(--primary-color);
 }
@@ -37,4 +31,9 @@
     font-size: 30px;
     vertical-align: middle;
     margin-right: 10px;
+}
+.mik-icon.xl {
+    font-size: 25px;
+    vertical-align: middle;
+    margin-right: 5px;
 }
