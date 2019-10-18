@@ -1,13 +1,40 @@
+/* @font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v41/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');
+} */
+
+:root {
+    /* mik-button */
+  --custom-hover-bg: red;
+  --custom-button-font-size: 0px;
+    /* mik icon */
+  --mik-icon-custom-color: #000000;
+  --mik-icon-custom-indent-left: 3px;
+  --mik-icon-custom-indent-top: 3px;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v41/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');
+}
+
 body {
     font-family: 'Source Sans Pro', sans-serif;
 
     --font-family-default: 'Source Sans Pro', sans-serif;
 
     --primary-color: #1800fc;
+    --button-bg-hover-primary: #1800fc87;
+
     --secondary-color: #00cc00;
-    
+    --button-bg-hover-secondary: #00cc008f;
+
     --tertiary-color: #33caca;
-    --button-bg-hover-tertiary: #8bbdbd;
+    --button-bg-hover-tertiary: #33caca8a;
 
     --small-size-width: 80px;
     --small-size-height: 30px;

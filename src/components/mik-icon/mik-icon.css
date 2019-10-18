@@ -1,0 +1,41 @@
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.material-icons.icon-custom-color {
+  color: var(--mik-icon-custom-color);
+}
+.material-icons.indent-left {
+  margin-left: var(--mik-icon-custom-indent-left);
+}
+.material-icons.indent-top {
+  margin-top: var(--mik-icon-custom-indent-top);
+}
+.primary {
+  color: var(--primary-color);
+}
+.secondary {
+  color: var(--secondary-color);
+}
+.tertiary {
+  color: var(--tertiary-color);
+}
+.mik-icon {
+    position: relative;
+    top: 2px;
+    left: -22px;
+    font-size: 27px;
+}

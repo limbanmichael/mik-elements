@@ -14,10 +14,16 @@ export namespace Components {
     'mikButtonColor': string;
     'mikButtonDisabled': boolean;
     'mikButtonIcon': string;
+    'mikButtonIconCustomColor': string;
+    'mikButtonIconIndentLeft': string;
     'mikButtonLoading': false;
     'mikButtonRadius': boolean;
     'mikButtonSize': string;
     'mikButtonTextAlign': string;
+    'mikCustomBgHoverColor': string;
+    'mikCustomButtonFontSize': string;
+    'mikCustomButtonSize': any;
+    'mikCustomButtonTextColor': string;
   }
   interface MikCard {
     'mikCardAuthor': string;
@@ -25,6 +31,13 @@ export namespace Components {
     'mikCardId': string;
     'mikCardImage'?: string;
     'mikCardTitle': string;
+  }
+  interface MikIcon {
+    'mikIcon': string;
+    'mikIconColor': string;
+    'mikIconCustomColor': string;
+    'mikIconIndentLeft': string;
+    'mikIconIndentTop': string;
   }
   interface MyComponent {}
 }
@@ -44,6 +57,12 @@ declare global {
     new (): HTMLMikCardElement;
   };
 
+  interface HTMLMikIconElement extends Components.MikIcon, HTMLStencilElement {}
+  var HTMLMikIconElement: {
+    prototype: HTMLMikIconElement;
+    new (): HTMLMikIconElement;
+  };
+
   interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
   var HTMLMyComponentElement: {
     prototype: HTMLMyComponentElement;
@@ -52,6 +71,7 @@ declare global {
   interface HTMLElementTagNameMap {
     'mik-button': HTMLMikButtonElement;
     'mik-card': HTMLMikCardElement;
+    'mik-icon': HTMLMikIconElement;
     'my-component': HTMLMyComponentElement;
   }
 }
@@ -62,10 +82,16 @@ declare namespace LocalJSX {
     'mikButtonColor'?: string;
     'mikButtonDisabled'?: boolean;
     'mikButtonIcon'?: string;
+    'mikButtonIconCustomColor'?: string;
+    'mikButtonIconIndentLeft'?: string;
     'mikButtonLoading'?: false;
     'mikButtonRadius'?: boolean;
     'mikButtonSize'?: string;
     'mikButtonTextAlign'?: string;
+    'mikCustomBgHoverColor'?: string;
+    'mikCustomButtonFontSize'?: string;
+    'mikCustomButtonSize'?: any;
+    'mikCustomButtonTextColor'?: string;
     'onMikButtonClick'?: (event: CustomEvent<any>) => void;
   }
   interface MikCard extends JSXBase.HTMLAttributes<HTMLMikCardElement> {
@@ -75,11 +101,19 @@ declare namespace LocalJSX {
     'mikCardImage'?: string;
     'mikCardTitle'?: string;
   }
+  interface MikIcon extends JSXBase.HTMLAttributes<HTMLMikIconElement> {
+    'mikIcon'?: string;
+    'mikIconColor'?: string;
+    'mikIconCustomColor'?: string;
+    'mikIconIndentLeft'?: string;
+    'mikIconIndentTop'?: string;
+  }
   interface MyComponent extends JSXBase.HTMLAttributes<HTMLMyComponentElement> {}
 
   interface IntrinsicElements {
     'mik-button': MikButton;
     'mik-card': MikCard;
+    'mik-icon': MikIcon;
     'my-component': MyComponent;
   }
 }

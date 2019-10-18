@@ -7,7 +7,7 @@ import { Component, h, State } from '@stencil/core';
 })
 export class MyComponent {
   @State() cardAuthor = 'Edsger W. Dijkstra';
-  @State() buttonDisable = true;
+  @State() buttonDisable = false;
   @State() makeRound = true;
 
   testButton() {
@@ -16,14 +16,20 @@ export class MyComponent {
 
 
   render() {
+    // const styleSize = {
+    //   width: '500px',
+    //   height: '100px'
+    // };
+    // console.log(styleSize,  ' style size');
     return (
       <div>
-        <mik-card
+        {/* <i class="large material-icons">insert_chart</i> */}
+        {/* <mik-card
           mikCardId="5a6ce86d2af929789500e7ca"
           mikCardAuthor={this.cardAuthor}
           mikCardContentMessage="The computing scientist’s main challenge is not to get confused by the complexities of his own making."
         >
-        </mik-card>
+        </mik-card> */}
         
         <mik-button
           mikButtonRadius={this.makeRound}
@@ -58,7 +64,7 @@ export class MyComponent {
         <mik-button
           mikButtonRadius={this.makeRound}
           mikButtonSize="xl"
-          mikButtonColor="tertiary"
+          mikButtonColor="secondary"
           buttonClick={this.testButton}
           mikButtonDisabled={this.buttonDisable}
         >
@@ -66,14 +72,38 @@ export class MyComponent {
         </mik-button>
         <br /><br /><br />
         <mik-button
-          // mikButtonRadius={this.makeRound}
+          mikButtonRadius={this.makeRound}
+          mikButtonSize="xxl"
+          mikButtonColor="tertiary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+          mikButtonIcon="done"
+          mikButtonIconCustomColor="white"
+          mikButtonIconIndentLeft="3px"
+        >
+          
+          XX large
+        </mik-button>
+        {/* <br /><br /><br />
+        <mik-button
+          mikCustomButtonFontSize="30px"
+          mikCustomBgHoverColor="#27ff98"
+          mikCustomButtonTextColor="#b77249"
+          mikCustomButtonSize={styleSize}
+          mikButtonRadius={this.makeRound}
           mikButtonSize="xxl"
           mikButtonColor="tertiary"
           buttonClick={this.testButton}
           mikButtonDisabled={this.buttonDisable}
         >
-          XX large
+          Custom Button
         </mik-button>
+        <mik-icon 
+          mikIcon="insert_chart" 
+          mikIconCustomColor="darkblue"
+          mikIconIndentLeft="10px"
+        >
+        </mik-icon> */}
       </div>
     );
   }
