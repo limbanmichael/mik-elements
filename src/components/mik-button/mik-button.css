@@ -67,14 +67,9 @@ button {
   outline: none;
 }
 
-.withButtonIcon-xxl span {
+.withButtonIcon-xxl span,
+.withButtonIcon-xl span,
+.withButtonIcon-large span {
     position: relative;
-    font-size: 17px;
-    vertical-align: middle;
-}
-
-.withButtonIcon-xl span {
-    position: relative;
-    font-size: 15px;
     vertical-align: middle;
 }

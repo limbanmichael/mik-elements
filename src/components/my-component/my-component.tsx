@@ -49,9 +49,12 @@ export class MyComponent {
           mikButtonDisabled={this.buttonDisable}
         >
           Medium
-        </mik-button>
+        </mik-button> */}
         <br/><br/><br/>
         <mik-button
+          mikButtonIcon="phone"
+          mikButtonIconCustomColor="white"
+          mikButtonIconIndentLeft="3px"
           mikButtonRadius={this.makeRound}
           mikButtonSize="large"
           mikButtonColor="primary"
@@ -59,7 +62,7 @@ export class MyComponent {
           mikButtonDisabled={this.buttonDisable}
         >
           large
-        </mik-button> */}
+        </mik-button>
         <br /><br /><br />
         <mik-button
           mikButtonRadius={this.makeRound}
@@ -67,7 +70,7 @@ export class MyComponent {
           mikButtonColor="secondary"
           buttonClick={this.testButton}
           mikButtonDisabled={this.buttonDisable}
-          mikButtonIcon="save"
+          mikButtonIcon="phone"
           mikButtonIconCustomColor="white"
           mikButtonIconIndentLeft="3px"
         >
