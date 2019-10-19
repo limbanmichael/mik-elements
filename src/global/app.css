@@ -36,6 +36,8 @@ body {
     --tertiary-color: #33caca;
     --button-bg-hover-tertiary: #33caca8a;
 
+    --disabled-color: #c2cece;
+
     --small-size-width: 80px;
     --small-size-height: 30px;
     --small-size-font-size: 12px;

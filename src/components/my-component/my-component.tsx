@@ -7,7 +7,7 @@ import { Component, h, State } from '@stencil/core';
 })
 export class MyComponent {
   @State() cardAuthor = 'Edsger W. Dijkstra';
-  @State() buttonDisable = false;
+  @State() buttonDisable = true;
   @State() makeRound = true;
 
   testButton() {
