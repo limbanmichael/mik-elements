@@ -18,12 +18,6 @@
 .material-icons.icon-custom-color {
   color: var(--mik-icon-custom-color);
 }
-.material-icons.indent-left {
-  margin-left: var(--mik-icon-custom-indent-left);
-}
-.material-icons.indent-top {
-  margin-top: var(--mik-icon-custom-indent-top);
-}
 .primary {
   color: var(--primary-color);
 }
@@ -33,9 +27,28 @@
 .tertiary {
   color: var(--tertiary-color);
 }
-.mik-icon {
-    position: relative;
-    top: 2px;
-    left: -22px;
-    font-size: 27px;
+.mik-icon.xxl {
+    font-size: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.mik-icon.xl {
+    font-size: 25px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.mik-icon.large {
+    font-size: 21px;
+    margin-right: 3px;
+    vertical-align: middle;
+}
+.mik-icon.medium {
+    font-size: 18px;
+    margin-right: 3px;
+    vertical-align: middle;
+}
+.mik-icon.small {
+    font-size: 17px;
+    margin-right: 3px;
+    vertical-align: middle;
 }

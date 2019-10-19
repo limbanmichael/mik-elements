@@ -34,6 +34,7 @@ export namespace Components {
   }
   interface MikIcon {
     'mikIcon': string;
+    'mikIconClassButtonSize': string;
     'mikIconColor': string;
     'mikIconCustomColor': string;
     'mikIconIndentLeft': string;
@@ -103,6 +104,7 @@ declare namespace LocalJSX {
   }
   interface MikIcon extends JSXBase.HTMLAttributes<HTMLMikIconElement> {
     'mikIcon'?: string;
+    'mikIconClassButtonSize'?: string;
     'mikIconColor'?: string;
     'mikIconCustomColor'?: string;
     'mikIconIndentLeft'?: string;

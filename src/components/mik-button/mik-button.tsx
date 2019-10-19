@@ -97,7 +97,8 @@ export class MikButton {
         const rootClass = {
             primary: this.mikButtonColor.toLowerCase() === 'primary',
             secondary: this.mikButtonColor.toLowerCase() === 'secondary',
-            tertiary: this.mikButtonColor.toLowerCase() === 'tertiary'
+            tertiary: this.mikButtonColor.toLowerCase() === 'tertiary',
+            // disable: this.mikButtonDisabled == true
         };
         const buttonSize = {
             small: this.mikButtonSize.toLowerCase() === 'small',
@@ -107,7 +108,7 @@ export class MikButton {
             xxl: this.mikButtonSize.toLowerCase() === 'xxl'
         };
         const buttonIcon = {
-            withButtonIcon: this.mikButtonIcon !== undefined
+            withButtonIcon: this.mikButtonIcon !== undefined,
         };
 
         const buttonSizeAsArray = Object.keys(buttonSize)
@@ -134,6 +135,7 @@ export class MikButton {
             >
                 {this.mikButtonIcon ?
                     <mik-icon
+                        mikIconClassButtonSize={this.mikButtonSize}
                         mikIcon={this.mikButtonIcon}
                         mikIconCustomColor={this.mikButtonIconCustomColor}
                         mikIconIndentLeft={this.mikButtonIconIndentLeft}

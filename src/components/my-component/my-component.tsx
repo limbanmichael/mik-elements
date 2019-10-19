@@ -7,7 +7,7 @@ import { Component, h, State } from '@stencil/core';
 })
 export class MyComponent {
   @State() cardAuthor = 'Edsger W. Dijkstra';
-  @State() buttonDisable = false;
+  @State() buttonDisable = true;
   @State() makeRound = true;
 
   testButton() {
@@ -32,6 +32,9 @@ export class MyComponent {
         </mik-card> */}
         
         <mik-button
+          mikButtonIcon="edit"
+          mikButtonIconCustomColor="white"
+          mikButtonIconIndentLeft="3px"
           mikButtonRadius={this.makeRound}
           mikButtonSize="small"
           mikButtonColor="tertiary"
@@ -42,6 +45,9 @@ export class MyComponent {
         </mik-button>
         <br /><br /><br />
         <mik-button
+          mikButtonIcon="build"
+          mikButtonIconCustomColor="white"
+          mikButtonIconIndentLeft="3px"
           mikButtonRadius={this.makeRound}
           mikButtonSize="medium"
           mikButtonColor="tertiary"
@@ -52,6 +58,9 @@ export class MyComponent {
         </mik-button>
         <br/><br/><br/>
         <mik-button
+          mikButtonIcon="backup"
+          mikButtonIconCustomColor="white"
+          // mikButtonIconIndentLeft="3px"
           mikButtonRadius={this.makeRound}
           mikButtonSize="large"
           mikButtonColor="primary"
@@ -67,6 +76,9 @@ export class MyComponent {
           mikButtonColor="secondary"
           buttonClick={this.testButton}
           mikButtonDisabled={this.buttonDisable}
+          mikButtonIcon="phone"
+          mikButtonIconCustomColor="white"
+          // mikButtonIconIndentLeft="3px"
         >
           Extra large
         </mik-button>
@@ -77,12 +89,12 @@ export class MyComponent {
           mikButtonColor="tertiary"
           buttonClick={this.testButton}
           mikButtonDisabled={this.buttonDisable}
-          mikButtonIcon="done"
+          mikButtonIcon="save"
           mikButtonIconCustomColor="white"
-          mikButtonIconIndentLeft="3px"
+          // mikButtonIconIndentLeft="3px"
         >
-          
-          XX large
+
+          XX Large
         </mik-button>
         {/* <br /><br /><br />
         <mik-button
