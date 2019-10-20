@@ -37,7 +37,7 @@ export class MikStepper {
                                 : <div 
                                     class={step.activeClass + ' stepper-number ' + step.done}
                                   >
-                                    {step.number}
+                                    <div class="rotate">{step.number}</div>
                                   </div>
                             }
                             
