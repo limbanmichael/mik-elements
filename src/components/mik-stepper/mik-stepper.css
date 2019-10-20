@@ -22,7 +22,6 @@
 
 .stepper-holder {
     text-align: center;
-    margin-right: 60px;
     width: 33%;
 }
 
@@ -48,6 +47,9 @@
     padding: 6px;
     color: white;
     font-size: 20px;
+}
+.step-title {
+    margin-top: 25px;
 }
 .dash{
     border: 1px solid red;

@@ -46,6 +46,12 @@ export class MyComponent {
         return nextIndex;
       }
     });
+    if (nextIndex === this.stepperConfig.length) {
+      console.log(nextIndex, ' next index');
+      this.stepperConfig[nextIndex - 1].done = true;
+      this.triggerProp = !this.triggerProp;
+      return false;
+    }
     this.stepperConfig[nextIndex].active = true;
     this.stepperConfig[nextIndex - 1].active = false;
     this.stepperConfig[nextIndex - 1].done = true;
