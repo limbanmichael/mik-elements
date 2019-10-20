@@ -29,7 +29,7 @@ export class MikButton {
     @Element() el: HTMLElement;
 
     onClickMikButton = (event: any) => {
-        console.log(this.mikButtonDisabled, 'click from mik-button.tsx');
+        console.log('click from mik-button.tsx');
         if (this.mikButtonDisabled) {
             return false;
         }
@@ -46,7 +46,7 @@ export class MikButton {
     }
 
     render() {
-        // console.log(this.sampleText)
+        console.log('butt0n render');
         
         let customWidth = '';
         let customHeight = '';

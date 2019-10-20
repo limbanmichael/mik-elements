@@ -40,6 +40,10 @@ export namespace Components {
     'mikIconIndentLeft': string;
     'mikIconIndentTop': string;
   }
+  interface MikStepper {
+    'stepperConfig': any;
+    'triggerProp': boolean;
+  }
   interface MyComponent {}
 }
 
@@ -64,6 +68,12 @@ declare global {
     new (): HTMLMikIconElement;
   };
 
+  interface HTMLMikStepperElement extends Components.MikStepper, HTMLStencilElement {}
+  var HTMLMikStepperElement: {
+    prototype: HTMLMikStepperElement;
+    new (): HTMLMikStepperElement;
+  };
+
   interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
   var HTMLMyComponentElement: {
     prototype: HTMLMyComponentElement;
@@ -73,6 +83,7 @@ declare global {
     'mik-button': HTMLMikButtonElement;
     'mik-card': HTMLMikCardElement;
     'mik-icon': HTMLMikIconElement;
+    'mik-stepper': HTMLMikStepperElement;
     'my-component': HTMLMyComponentElement;
   }
 }
@@ -110,12 +121,17 @@ declare namespace LocalJSX {
     'mikIconIndentLeft'?: string;
     'mikIconIndentTop'?: string;
   }
+  interface MikStepper extends JSXBase.HTMLAttributes<HTMLMikStepperElement> {
+    'stepperConfig'?: any;
+    'triggerProp'?: boolean;
+  }
   interface MyComponent extends JSXBase.HTMLAttributes<HTMLMyComponentElement> {}
 
   interface IntrinsicElements {
     'mik-button': MikButton;
     'mik-card': MikCard;
     'mik-icon': MikIcon;
+    'mik-stepper': MikStepper;
     'my-component': MyComponent;
   }
 }
