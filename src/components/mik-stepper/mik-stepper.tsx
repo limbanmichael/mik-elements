@@ -42,6 +42,9 @@ export class MikStepper {
                             }
                             
                         </div>
+                        {/* <div class="dash-holder">
+                            <div class="dash"></div>
+                        </div> */}
                         <div class="step-title">{step.title}</div>
                     </div>
                 )}

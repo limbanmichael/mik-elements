@@ -155,6 +155,84 @@ export class MyComponent {
         >
           XX Large
         </mik-button>
+        <br /><br /><br />
+        <mik-button
+          mikButtonRadius={this.makeRound}
+          mikButtonSize="xxl"
+          mikButtonColor="tertiary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+          mikButtonIcon="save"
+          mikButtonIconCustomColor="white"
+        // mikButtonIconIndentLeft="3px"
+        >
+          XX Large
+        </mik-button>
+        <br /><br /><br />
+        <mik-button
+          mikButtonRadius={this.makeRound}
+          mikButtonSize="xxl"
+          mikButtonColor="tertiary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+          mikButtonIcon="save"
+          mikButtonIconCustomColor="white"
+        // mikButtonIconIndentLeft="3px"
+        >
+          XX Large
+        </mik-button>
+        <br /><br /><br />
+        <mik-button
+          mikButtonRadius={this.makeRound}
+          mikButtonSize="xxl"
+          mikButtonColor="tertiary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+          mikButtonIcon="save"
+          mikButtonIconCustomColor="white"
+        // mikButtonIconIndentLeft="3px"
+        >
+          XX Large
+        </mik-button>
+        <br /><br /><br />
+        <mik-button
+          mikButtonRadius={this.makeRound}
+          mikButtonSize="xxl"
+          mikButtonColor="tertiary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+          mikButtonIcon="save"
+          mikButtonIconCustomColor="white"
+        // mikButtonIconIndentLeft="3px"
+        >
+          XX Large
+        </mik-button>
+        <br /><br /><br />
+        <mik-button
+          mikButtonRadius={this.makeRound}
+          mikButtonSize="xxl"
+          mikButtonColor="tertiary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+          mikButtonIcon="save"
+          mikButtonIconCustomColor="white"
+        // mikButtonIconIndentLeft="3px"
+        >
+          XX Large
+        </mik-button>
+        <br /><br /><br />
+        <mik-button
+          mikButtonRadius={this.makeRound}
+          mikButtonSize="xxl"
+          mikButtonColor="tertiary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+          mikButtonIcon="save"
+          mikButtonIconCustomColor="white"
+        // mikButtonIconIndentLeft="3px"
+        >
+          XX Large
+        </mik-button>
 
         {/* <br /><br /><br />
         <mik-button
