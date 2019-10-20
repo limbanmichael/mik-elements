@@ -7,11 +7,49 @@ import { Component, h, State } from '@stencil/core';
 })
 export class MyComponent {
   @State() cardAuthor = 'Edsger W. Dijkstra';
-  @State() buttonDisable = true;
+  @State() triggerProp = false;
+  @State() buttonDisable = false;
   @State() makeRound = true;
+  @State() stepperConfig = [
+    {
+      done: false,
+      active: true,
+      number: 1,
+      title: 'Select Campaign Settings'
+    },
+    {
+      done: false,
+      active: false,
+      number: 2,
+      title: 'Create an ad'
+    },
+    {
+      done: false,
+      active: false,
+      // activeClass: function () {
+      //   if (this.active) {
+      //     return 'active';
+      //   } else {
+      //     return '';
+      //   }
+      // },
+      number: 3,
+      title: 'Final Step'
+    }
+  ];
 
-  testButton() {
-    console.log('from my-component.tsx');
+  testButton = () => {
+    let nextIndex = 0;
+    this.stepperConfig.filter((step, index) => {
+      if (step.active) {
+        nextIndex = index + 1;
+        return nextIndex;
+      }
+    });
+    this.stepperConfig[nextIndex].active = true;
+    this.stepperConfig[nextIndex - 1].active = false;
+    this.stepperConfig[nextIndex - 1].done = true;
+    this.triggerProp = !this.triggerProp;
   }
 
 
@@ -20,10 +58,9 @@ export class MyComponent {
     //   width: '500px',
     //   height: '100px'
     // };
-    // console.log(styleSize,  ' style size');
+    // console.log(this.stepperConfig,  ' style size');
     return (
       <div>
-        {/* <i class="large material-icons">insert_chart</i> */}
         {/* <mik-card
           mikCardId="5a6ce86d2af929789500e7ca"
           mikCardAuthor={this.cardAuthor}
@@ -83,6 +120,23 @@ export class MyComponent {
           Extra large
         </mik-button>
         <br /><br /><br />
+        <mik-stepper 
+          stepperConfig={this.stepperConfig}
+          triggerProp={this.triggerProp}
+        ></mik-stepper>
+        <br/><br/><br/>
+        <mik-button
+          mikButtonRadius={this.makeRound}
+          mikButtonSize="xxl"
+          mikButtonColor="tertiary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+          mikButtonIcon="navigate_next"
+          mikButtonIconCustomColor="white"
+        >
+          Next
+        </mik-button>
+        <br/><br/><br/>
         <mik-button
           mikButtonRadius={this.makeRound}
           mikButtonSize="xxl"
@@ -93,9 +147,9 @@ export class MyComponent {
           mikButtonIconCustomColor="white"
           // mikButtonIconIndentLeft="3px"
         >
-
           XX Large
         </mik-button>
+
         {/* <br /><br /><br />
         <mik-button
           mikCustomButtonFontSize="30px"
