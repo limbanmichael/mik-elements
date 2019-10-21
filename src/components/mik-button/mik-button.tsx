@@ -46,7 +46,7 @@ export class MikButton {
     }
 
     render() {
-        console.log('butt0n render');
+        // console.log('butt0n render');
         
         let customWidth = '';
         let customHeight = '';
@@ -124,7 +124,7 @@ export class MikButton {
         const wholeClass = `mik-button ${activeButtonSize} ${activeRootClass} \
         ${isMikButtonRadius} ${customHoverBgColorClass} ${customFontSize} ${buttonIconClass}`;
 
-        console.log(activeButtonIcon, ' styles element');
+        // console.log(activeButtonIcon, ' styles element');
 
         return (
             <button 

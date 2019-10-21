@@ -41,6 +41,7 @@ export namespace Components {
     'mikIconIndentTop': string;
   }
   interface MikStepper {
+    'stepWidth': string;
     'stepperConfig': any;
     'triggerProp': boolean;
   }
@@ -122,6 +123,7 @@ declare namespace LocalJSX {
     'mikIconIndentTop'?: string;
   }
   interface MikStepper extends JSXBase.HTMLAttributes<HTMLMikStepperElement> {
+    'stepWidth'?: string;
     'stepperConfig'?: any;
     'triggerProp'?: boolean;
   }
