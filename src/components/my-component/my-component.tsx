@@ -15,27 +15,26 @@ export class MyComponent {
       done: false,
       active: true,
       number: 1,
-      title: 'Select Campaign Settings'
+      title: 'Select Campaign Settings',
     },
     {
       done: false,
       active: false,
       number: 2,
-      title: 'Create an ad'
+      title: 'Create an ad',
     },
     {
       done: false,
       active: false,
-      // activeClass: function () {
-      //   if (this.active) {
-      //     return 'active';
-      //   } else {
-      //     return '';
-      //   }
-      // },
       number: 3,
-      title: 'Final Step'
-    }
+      title: 'Update Profile',
+    },
+    // {
+    //   done: false,
+    //   active: false,
+    //   number: 4,
+    //   title: 'Finish',
+    // },
   ];
 
   testButton = () => {
@@ -47,7 +46,7 @@ export class MyComponent {
       }
     });
     if (nextIndex === this.stepperConfig.length) {
-      console.log(nextIndex, ' next index');
+      // console.log(nextIndex, ' next index');
       this.stepperConfig[nextIndex - 1].done = true;
       this.triggerProp = !this.triggerProp;
       return false;
@@ -129,6 +128,7 @@ export class MyComponent {
         <mik-stepper 
           stepperConfig={this.stepperConfig}
           triggerProp={this.triggerProp}
+          stepWidth="33%"
         ></mik-stepper>
         <br/><br/><br/>
         <mik-button

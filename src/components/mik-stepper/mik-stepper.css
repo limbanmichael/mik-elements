@@ -22,7 +22,9 @@
 
 .stepper-holder {
     text-align: center;
-    width: 33%;
+    /* width: 33%; */
+    /* margin-left: 22px; */
+    width: var(--mik-stepper-step-width);
 }
 
 .stepper-round {
@@ -39,8 +41,6 @@
 }
 .stepper-round .stepper-number.active {
     background-color: #007eff;
-    /* transition: opacity .3s, transform .3s;
-    transform: rotate(360deg); */
 }
 .stepper-round .stepper-number.active .rotate {
     transition: opacity 4s, transform .4s;
@@ -50,9 +50,9 @@
 .stepper-round .stepper-number::after, 
 .stepper-round .stepper-done::after {
     content: '';
-    width: 24%;
+    width: var(--mik-stepper-step-width);
+    z-index: -1;
     margin-top: 10px;
-    margin-left: 34px;
     border-bottom: solid 1px #9e9e9e;
     position: absolute;
 }
@@ -82,7 +82,6 @@
 }
 .dash{
     border: 1px solid #9e9e9e;
-    /* width: 120px; */
     height: 0px;
 
 }

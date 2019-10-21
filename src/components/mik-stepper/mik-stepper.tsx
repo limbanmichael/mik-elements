@@ -1,4 +1,4 @@
-import { Component, h, Prop, State } from '@stencil/core';
+import { Component, h, Prop, State, Element } from '@stencil/core';
 
 @Component({
     tag: 'mik-stepper',
@@ -10,6 +10,13 @@ export class MikStepper {
     @Prop() stepperConfig: any;
     @Prop() triggerProp = false;
     @State() configMap = [];
+    @Prop() stepWidth: string;
+    @Element() el: HTMLElement;
+
+    componentDidLoad() {
+        this.el.shadowRoot.querySelector('div')
+            .style.setProperty('--mik-stepper-step-width', this.stepWidth);
+    }
 
     render() {
         this.configMap = [];
@@ -19,15 +26,20 @@ export class MikStepper {
                 active: step.active,
                 activeClass: step.active ? 'active' : '',
                 number: step.number,
-                title: step.title
+                title: step.title,
+                width: step.width
             };
             this.configMap.push(conf);
         });
-        console.log(this.configMap);
+
+        // const styleWidth = {
+        //     width: this.stepWidth
+        // };
+        // console.log(this.configMap);
 
         return (
             <div class="steppers-container">
-                {this.configMap.map((step) => 
+                {this.configMap.map((step) => (
                     <div class="stepper-holder">
                         <div class="stepper-round">
                             {step.done ?
@@ -42,12 +54,9 @@ export class MikStepper {
                             }
                             
                         </div>
-                        {/* <div class="dash-holder">
-                            <div class="dash"></div>
-                        </div> */}
                         <div class="step-title">{step.title}</div>
                     </div>
-                )}
+                ))}
             </div>
         );
     }
