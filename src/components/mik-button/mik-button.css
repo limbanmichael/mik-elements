@@ -35,6 +35,13 @@
   font-size: var(--large-size-font-size);
   font-weight: var(--large-size-font-weight);
 }
+button.disabled {
+  background-color: var(--disabled-color);
+}
+button.disabled:hover {
+  cursor: unset;
+  background-color: var(--disabled-color);
+}
 .xl {
   width: var(--xl-size-width);
   height: var(--xl-size-height);

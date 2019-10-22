@@ -59,10 +59,10 @@ export class MyComponent {
 
 
   render() {
-    // const styleSize = {
-    //   width: '500px',
-    //   height: '100px'
-    // };
+    const styleSize = {
+      width: '500px',
+      height: '100px'
+    };
     // console.log(this.stepperConfig,  ' style size');
     return (
       <div>
@@ -124,12 +124,6 @@ export class MyComponent {
         >
           Extra large
         </mik-button>
-        <br /><br /><br />
-        <mik-stepper 
-          stepperConfig={this.stepperConfig}
-          triggerProp={this.triggerProp}
-          stepWidth="33%"
-        ></mik-stepper>
         <br/><br/><br/>
         <mik-button
           mikButtonRadius={this.makeRound}
@@ -155,86 +149,15 @@ export class MyComponent {
         >
           XX Large
         </mik-button>
-        <br /><br /><br />
-        <mik-button
-          mikButtonRadius={this.makeRound}
-          mikButtonSize="xxl"
-          mikButtonColor="tertiary"
-          buttonClick={this.testButton}
-          mikButtonDisabled={this.buttonDisable}
-          mikButtonIcon="save"
-          mikButtonIconCustomColor="white"
-        // mikButtonIconIndentLeft="3px"
-        >
-          XX Large
-        </mik-button>
-        <br /><br /><br />
-        <mik-button
-          mikButtonRadius={this.makeRound}
-          mikButtonSize="xxl"
-          mikButtonColor="tertiary"
-          buttonClick={this.testButton}
-          mikButtonDisabled={this.buttonDisable}
-          mikButtonIcon="save"
-          mikButtonIconCustomColor="white"
-        // mikButtonIconIndentLeft="3px"
-        >
-          XX Large
-        </mik-button>
-        <br /><br /><br />
-        <mik-button
-          mikButtonRadius={this.makeRound}
-          mikButtonSize="xxl"
-          mikButtonColor="tertiary"
-          buttonClick={this.testButton}
-          mikButtonDisabled={this.buttonDisable}
-          mikButtonIcon="save"
-          mikButtonIconCustomColor="white"
-        // mikButtonIconIndentLeft="3px"
-        >
-          XX Large
-        </mik-button>
-        <br /><br /><br />
-        <mik-button
-          mikButtonRadius={this.makeRound}
-          mikButtonSize="xxl"
-          mikButtonColor="tertiary"
-          buttonClick={this.testButton}
-          mikButtonDisabled={this.buttonDisable}
-          mikButtonIcon="save"
-          mikButtonIconCustomColor="white"
-        // mikButtonIconIndentLeft="3px"
-        >
-          XX Large
-        </mik-button>
-        <br /><br /><br />
-        <mik-button
-          mikButtonRadius={this.makeRound}
-          mikButtonSize="xxl"
-          mikButtonColor="tertiary"
-          buttonClick={this.testButton}
-          mikButtonDisabled={this.buttonDisable}
-          mikButtonIcon="save"
-          mikButtonIconCustomColor="white"
-        // mikButtonIconIndentLeft="3px"
-        >
-          XX Large
-        </mik-button>
-        <br /><br /><br />
-        <mik-button
-          mikButtonRadius={this.makeRound}
-          mikButtonSize="xxl"
-          mikButtonColor="tertiary"
-          buttonClick={this.testButton}
-          mikButtonDisabled={this.buttonDisable}
-          mikButtonIcon="save"
-          mikButtonIconCustomColor="white"
-        // mikButtonIconIndentLeft="3px"
-        >
-          XX Large
-        </mik-button>
 
-        {/* <br /><br /><br />
+        <br /><br /><br />
+        <mik-stepper
+          stepperConfig={this.stepperConfig}
+          triggerProp={this.triggerProp}
+          stepWidth="33%"
+        ></mik-stepper>
+
+        <br /><br /><br />
         <mik-button
           mikCustomButtonFontSize="30px"
           mikCustomBgHoverColor="#27ff98"
@@ -245,10 +168,11 @@ export class MyComponent {
           mikButtonColor="tertiary"
           buttonClick={this.testButton}
           mikButtonDisabled={this.buttonDisable}
+          mikButtonIcon="save"
         >
           Custom Button
         </mik-button>
-        <mik-icon 
+        {/* <mik-icon 
           mikIcon="insert_chart" 
           mikIconCustomColor="darkblue"
           mikIconIndentLeft="10px"
