@@ -131,6 +131,7 @@ export class MyComponent {
         <mik-button
           mikButtonIcon="edit"
           mikButtonIconCustomColor="white"
+          mikButtonRadius={this.makeRound}
           mikButtonIconIndentLeft="3px"
           mikButtonSize="small"
           mikButtonColor="tertiary"
