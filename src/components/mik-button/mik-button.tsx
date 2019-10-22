@@ -24,6 +24,8 @@ export class MikButton {
     @Prop() mikCustomBgHoverColor: string;
     @Prop() mikCustomButtonFontSize: string;
 
+    @Prop() mikButtonAnimation = false;
+
     @Prop() buttonClick: (e: MouseEvent) => void;
     @Event() mikButtonClick: EventEmitter;
     @Element() el: HTMLElement;
@@ -140,7 +142,9 @@ export class MikButton {
             xxl: this.mikButtonSize.toLowerCase() === 'xxl' ? true : false,
             primary: this.mikButtonColor.toLowerCase() === 'primary' ? true : false,
             secondary: this.mikButtonColor.toLowerCase() === 'secondary' ? true : false,
-            tertiary: this.mikButtonColor.toLowerCase() === 'tertiary' ? true : false
+            tertiary: this.mikButtonColor.toLowerCase() === 'tertiary' ? true : false,
+            warning: this.mikButtonColor.toLowerCase() === 'warning' ? true : false,
+            buttonAnimation: this.mikButtonAnimation
         };
         rootClass[isMikButtonRadius] = isMikButtonRadius ? true : false;
         rootClass[customHoverBgColorClass] = customHoverBgColorClass ? true : false;

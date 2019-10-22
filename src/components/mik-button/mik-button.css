@@ -16,6 +16,9 @@
 .tertiary:hover {
   background-color: var(--button-bg-hover-tertiary);
 }
+.warning:hover {
+  background-color: var(--button-bg-hover-warning);
+}
 
 .small {
   width: var(--small-size-width);
@@ -35,12 +38,19 @@
   font-size: var(--large-size-font-size);
   font-weight: var(--large-size-font-weight);
 }
-button.disabled {
+.warning {
+  background-color: var(--warning-color);
+}
+button.disabled.mik-button {
   background-color: var(--disabled-color);
 }
 button.disabled:hover {
   cursor: unset;
   background-color: var(--disabled-color);
+}
+.buttonAnimation:hover {
+  transform: scale(1.05);
+  transition: .3s;
 }
 .xl {
   width: var(--xl-size-width);
@@ -55,7 +65,7 @@ button.disabled:hover {
   font-weight: var(--xxl-size-font-weight);
 }
 
-.is-radius {
+.mik-button.is-radius {
   border-radius: 20px;
 }
 
@@ -72,6 +82,7 @@ button {
   color: white;
   font-family: var(--font-family-default);
   outline: none;
+  border-radius: 5px;
 }
 
 .withButtonIcon-xxl span,

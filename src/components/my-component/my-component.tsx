@@ -212,9 +212,31 @@ export class MyComponent {
           mikButtonDisabled={true}
           mikButtonIcon="save"
           mikButtonIconCustomColor="white"
-        // mikButtonIconIndentLeft="3px"
         >
-          XX Large
+          Disabled
+        </mik-button>
+        <mik-button
+          mikButtonRadius={this.makeRound}
+          mikButtonSize="xxl"
+          mikButtonColor="warning"
+          buttonClick={this.testButton}
+          mikButtonIcon="save"
+          mikButtonIconCustomColor="white"
+        >
+          Warning
+        </mik-button>
+        <br/><br/><br/>
+        <mik-button
+          mikButtonRadius={this.makeRound}
+          mikButtonSize="xxl"
+          mikButtonColor="tertiary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+          mikButtonIcon="save"
+          mikButtonIconCustomColor="white"
+          mikButtonAnimation={true}
+        >
+          Animation
         </mik-button>
 
 
