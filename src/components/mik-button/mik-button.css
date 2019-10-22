@@ -19,6 +19,14 @@
 .warning:hover {
   background-color: var(--button-bg-hover-warning);
 }
+.buttonOutlined {
+  border: 1px solid var(--tertiary-color);
+  background-color: unset;
+  color: var(--tertiary-color);
+}
+.buttonOutlined:hover {
+  background-color: #33caca24;
+}
 
 .small {
   width: var(--small-size-width);

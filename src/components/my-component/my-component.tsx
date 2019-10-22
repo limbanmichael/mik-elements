@@ -29,12 +29,12 @@ export class MyComponent {
       number: 3,
       title: 'Update Profile',
     },
-    // {
-    //   done: false,
-    //   active: false,
-    //   number: 4,
-    //   title: 'Finish',
-    // },
+    {
+      done: false,
+      active: false,
+      number: 4,
+      title: 'Finish',
+    },
   ];
 
   testButton = () => {
@@ -237,6 +237,32 @@ export class MyComponent {
           mikButtonAnimation={true}
         >
           Animation
+        </mik-button>
+        <mik-button
+          mikButtonVariant="outlined"
+          mikButtonRadius={this.makeRound}
+          mikButtonSize="xxl"
+          mikButtonColor="tertiary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+          mikButtonIcon="save"
+          mikButtonIconCustomColor="white"
+          mikButtonAnimation={true}
+        >
+          Outlined
+        </mik-button>
+        <mik-button
+          mikButtonVariant="outlined"
+          // mikButtonRadius={this.makeRound}
+          mikButtonSize="xxl"
+          mikButtonColor="tertiary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+          mikButtonIcon="save"
+          mikButtonIconCustomColor="white"
+          // mikButtonAnimation={true}
+        >
+          Outlined
         </mik-button>
 
 

@@ -7,6 +7,7 @@ import { Component, Prop, h, Event, EventEmitter, Element } from '@stencil/core'
 })
 
 export class MikButton {
+    @Prop() mikButtonVariant = '';
     @Prop() mikButtonColor: string;
     @Prop() mikButtonDisabled: boolean;
     @Prop() mikButtonTextAlign: string;
@@ -144,7 +145,8 @@ export class MikButton {
             secondary: this.mikButtonColor.toLowerCase() === 'secondary' ? true : false,
             tertiary: this.mikButtonColor.toLowerCase() === 'tertiary' ? true : false,
             warning: this.mikButtonColor.toLowerCase() === 'warning' ? true : false,
-            buttonAnimation: this.mikButtonAnimation
+            buttonAnimation: this.mikButtonAnimation,
+            buttonOutlined: this.mikButtonVariant.toLowerCase() === 'outlined' ? true : false
         };
         rootClass[isMikButtonRadius] = isMikButtonRadius ? true : false;
         rootClass[customHoverBgColorClass] = customHoverBgColorClass ? true : false;
@@ -162,7 +164,7 @@ export class MikButton {
                 onClick={this.onClickMikButton.bind(this)}
                 disabled={this.mikButtonDisabled}
             >
-                {this.mikButtonIcon ?
+                {this.mikButtonIcon && rootClass.buttonOutlined === false ?
                     <mik-icon
                         mikIconClassButtonSize={this.mikButtonSize}
                         mikIcon={this.mikButtonIcon}

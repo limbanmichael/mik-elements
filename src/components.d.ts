@@ -21,6 +21,7 @@ export namespace Components {
     'mikButtonRadius': boolean;
     'mikButtonSize': string;
     'mikButtonTextAlign': string;
+    'mikButtonVariant': string;
     'mikCustomBgHoverColor': string;
     'mikCustomButtonFontSize': string;
     'mikCustomButtonSize': any;
@@ -103,6 +104,7 @@ declare namespace LocalJSX {
     'mikButtonRadius'?: boolean;
     'mikButtonSize'?: string;
     'mikButtonTextAlign'?: string;
+    'mikButtonVariant'?: string;
     'mikCustomBgHoverColor'?: string;
     'mikCustomButtonFontSize'?: string;
     'mikCustomButtonSize'?: any;
