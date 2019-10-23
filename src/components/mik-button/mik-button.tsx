@@ -26,6 +26,7 @@ export class MikButton {
     @Prop() mikCustomButtonFontSize: string;
 
     @Prop() mikButtonAnimation = false;
+    @Prop() mikBoxShadow = true
 
     @Prop() buttonClick: (e: MouseEvent) => void;
     @Event() mikButtonClick: EventEmitter;
@@ -146,13 +147,18 @@ export class MikButton {
             tertiary: this.mikButtonColor.toLowerCase() === 'tertiary' ? true : false,
             warning: this.mikButtonColor.toLowerCase() === 'warning' ? true : false,
             buttonAnimation: this.mikButtonAnimation,
-            buttonOutlined: this.mikButtonVariant.toLowerCase() === 'outlined' ? true : false
+            buttonOutlined: this.mikButtonVariant.toLowerCase() === 'outlined' ? true : false,
+            boxShadow: this.mikBoxShadow
         };
         rootClass[isMikButtonRadius] = isMikButtonRadius ? true : false;
         rootClass[customHoverBgColorClass] = customHoverBgColorClass ? true : false;
         rootClass[customFontSize] = customFontSize ? true : false;
         rootClass[buttonIconClass] = buttonIconClass ? true : false;
         rootClass[buttonDisabled] = buttonDisabled ? true : false;
+
+        if (rootClass.buttonOutlined) {
+            rootClass.boxShadow = false;
+        }
 
         console.log(rootClass, ' styles element');
 
