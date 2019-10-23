@@ -59,10 +59,10 @@ export class MyComponent {
 
 
   render() {
-    // const styleSize = {
-    //   width: '500px',
-    //   height: '100px'
-    // };
+    const styleSize = {
+      width: '200px',
+      height: '50px'
+    };
     // console.log(this.stepperConfig,  ' style size');
     return (
       <div>
@@ -72,12 +72,10 @@ export class MyComponent {
           mikCardContentMessage="The computing scientist’s main challenge is not to get confused by the complexities of his own making."
         >
         </mik-card> */}
-        
         <mik-button
           mikButtonIcon="edit"
           mikButtonIconCustomColor="white"
           mikButtonIconIndentLeft="3px"
-          mikButtonRadius={this.makeRound}
           mikButtonSize="small"
           mikButtonColor="tertiary"
           buttonClick={this.testButton}
@@ -85,7 +83,63 @@ export class MyComponent {
         >
           Small
         </mik-button>
-        <br /><br /><br />
+        <mik-button
+          mikButtonIcon="build"
+          mikButtonIconCustomColor="white"
+          mikButtonIconIndentLeft="3px"
+          mikButtonSize="medium"
+          mikButtonColor="tertiary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+        >
+          Medium
+        </mik-button>
+        <mik-button
+          mikButtonIcon="backup"
+          mikButtonIconCustomColor="white"
+          mikButtonSize="large"
+          mikButtonColor="primary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+        >
+          large
+        </mik-button>
+        <mik-button
+          mikButtonSize="xl"
+          mikButtonColor="secondary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+          mikButtonIcon="phone"
+          mikButtonIconCustomColor="white"
+        // mikButtonIconIndentLeft="3px"
+        >
+          Extra large
+        </mik-button>
+        <mik-button
+          mikButtonSize="xxl"
+          mikButtonColor="tertiary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+          mikButtonIcon="save"
+          mikButtonIconCustomColor="white"
+        // mikButtonIconIndentLeft="3px"
+        >
+          XX Large
+        </mik-button>
+        
+        <br/><br/><br/>
+        <mik-button
+          mikButtonIcon="edit"
+          mikButtonIconCustomColor="white"
+          mikButtonRadius={this.makeRound}
+          mikButtonIconIndentLeft="3px"
+          mikButtonSize="small"
+          mikButtonColor="tertiary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+        >
+          Small
+        </mik-button>
         <mik-button
           mikButtonIcon="build"
           mikButtonIconCustomColor="white"
@@ -98,7 +152,6 @@ export class MyComponent {
         >
           Medium
         </mik-button>
-        <br/><br/><br/>
         <mik-button
           mikButtonIcon="backup"
           mikButtonIconCustomColor="white"
@@ -111,7 +164,6 @@ export class MyComponent {
         >
           large
         </mik-button>
-        <br /><br /><br />
         <mik-button
           mikButtonRadius={this.makeRound}
           mikButtonSize="xl"
@@ -124,103 +176,6 @@ export class MyComponent {
         >
           Extra large
         </mik-button>
-        <br /><br /><br />
-        <mik-stepper 
-          stepperConfig={this.stepperConfig}
-          triggerProp={this.triggerProp}
-          stepWidth="33%"
-        ></mik-stepper>
-        <br/><br/><br/>
-        <mik-button
-          mikButtonRadius={this.makeRound}
-          mikButtonSize="xxl"
-          mikButtonColor="tertiary"
-          buttonClick={this.testButton}
-          mikButtonDisabled={this.buttonDisable}
-          mikButtonIcon="navigate_next"
-          mikButtonIconCustomColor="white"
-        >
-          Next
-        </mik-button>
-        <br/><br/><br/>
-        <mik-button
-          mikButtonRadius={this.makeRound}
-          mikButtonSize="xxl"
-          mikButtonColor="tertiary"
-          buttonClick={this.testButton}
-          mikButtonDisabled={this.buttonDisable}
-          mikButtonIcon="save"
-          mikButtonIconCustomColor="white"
-          // mikButtonIconIndentLeft="3px"
-        >
-          XX Large
-        </mik-button>
-        <br /><br /><br />
-        <mik-button
-          mikButtonRadius={this.makeRound}
-          mikButtonSize="xxl"
-          mikButtonColor="tertiary"
-          buttonClick={this.testButton}
-          mikButtonDisabled={this.buttonDisable}
-          mikButtonIcon="save"
-          mikButtonIconCustomColor="white"
-        // mikButtonIconIndentLeft="3px"
-        >
-          XX Large
-        </mik-button>
-        <br /><br /><br />
-        <mik-button
-          mikButtonRadius={this.makeRound}
-          mikButtonSize="xxl"
-          mikButtonColor="tertiary"
-          buttonClick={this.testButton}
-          mikButtonDisabled={this.buttonDisable}
-          mikButtonIcon="save"
-          mikButtonIconCustomColor="white"
-        // mikButtonIconIndentLeft="3px"
-        >
-          XX Large
-        </mik-button>
-        <br /><br /><br />
-        <mik-button
-          mikButtonRadius={this.makeRound}
-          mikButtonSize="xxl"
-          mikButtonColor="tertiary"
-          buttonClick={this.testButton}
-          mikButtonDisabled={this.buttonDisable}
-          mikButtonIcon="save"
-          mikButtonIconCustomColor="white"
-        // mikButtonIconIndentLeft="3px"
-        >
-          XX Large
-        </mik-button>
-        <br /><br /><br />
-        <mik-button
-          mikButtonRadius={this.makeRound}
-          mikButtonSize="xxl"
-          mikButtonColor="tertiary"
-          buttonClick={this.testButton}
-          mikButtonDisabled={this.buttonDisable}
-          mikButtonIcon="save"
-          mikButtonIconCustomColor="white"
-        // mikButtonIconIndentLeft="3px"
-        >
-          XX Large
-        </mik-button>
-        <br /><br /><br />
-        <mik-button
-          mikButtonRadius={this.makeRound}
-          mikButtonSize="xxl"
-          mikButtonColor="tertiary"
-          buttonClick={this.testButton}
-          mikButtonDisabled={this.buttonDisable}
-          mikButtonIcon="save"
-          mikButtonIconCustomColor="white"
-        // mikButtonIconIndentLeft="3px"
-        >
-          XX Large
-        </mik-button>
-        <br /><br /><br />
         <mik-button
           mikButtonRadius={this.makeRound}
           mikButtonSize="xxl"
@@ -234,9 +189,9 @@ export class MyComponent {
           XX Large
         </mik-button>
 
-        {/* <br /><br /><br />
+        <br /><br /><br />
         <mik-button
-          mikCustomButtonFontSize="30px"
+          mikCustomButtonFontSize="21px"
           mikCustomBgHoverColor="#27ff98"
           mikCustomButtonTextColor="#b77249"
           mikCustomButtonSize={styleSize}
@@ -245,10 +200,92 @@ export class MyComponent {
           mikButtonColor="tertiary"
           buttonClick={this.testButton}
           mikButtonDisabled={this.buttonDisable}
+          mikButtonIcon="save"
         >
           Custom Button
         </mik-button>
-        <mik-icon 
+        <mik-button
+          mikButtonRadius={this.makeRound}
+          mikButtonSize="xxl"
+          mikButtonColor="tertiary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={true}
+          mikButtonIcon="save"
+          mikButtonIconCustomColor="white"
+        >
+          Disabled
+        </mik-button>
+        <mik-button
+          mikButtonRadius={this.makeRound}
+          mikButtonSize="xxl"
+          mikButtonColor="warning"
+          buttonClick={this.testButton}
+          mikButtonIcon="save"
+          mikButtonIconCustomColor="white"
+        >
+          Warning
+        </mik-button>
+        <br/><br/><br/>
+        <mik-button
+          mikButtonRadius={this.makeRound}
+          mikButtonSize="xxl"
+          mikButtonColor="tertiary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+          mikButtonIcon="save"
+          mikButtonIconCustomColor="white"
+          mikButtonAnimation={true}
+        >
+          Animation
+        </mik-button>
+        <mik-button
+          mikButtonVariant="outlined"
+          mikButtonRadius={this.makeRound}
+          mikButtonSize="xxl"
+          mikButtonColor="tertiary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+          mikButtonIcon="save"
+          mikButtonIconCustomColor="white"
+          mikButtonAnimation={true}
+        >
+          Outlined
+        </mik-button>
+        <mik-button
+          mikButtonVariant="outlined"
+          // mikButtonRadius={this.makeRound}
+          mikButtonSize="xxl"
+          mikButtonColor="tertiary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+          mikButtonIcon="save"
+          mikButtonIconCustomColor="white"
+          // mikButtonAnimation={true}
+        >
+          Outlined
+        </mik-button>
+        <mik-button
+          mikBoxShadow={false}
+          mikButtonSize="xxl"
+          mikButtonColor="tertiary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+          mikButtonIcon="save"
+          mikButtonIconCustomColor="white"
+        // mikButtonIconIndentLeft="3px"
+        >
+          No Shadow
+        </mik-button>
+
+
+        <br /><br /><br />
+        <mik-stepper
+          stepperConfig={this.stepperConfig}
+          triggerProp={this.triggerProp}
+          stepWidth="33%"
+        ></mik-stepper>
+
+        {/* <mik-icon 
           mikIcon="insert_chart" 
           mikIconCustomColor="darkblue"
           mikIconIndentLeft="10px"

@@ -11,6 +11,8 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 export namespace Components {
   interface MikButton {
     'buttonClick': (e: MouseEvent) => void;
+    'mikBoxShadow': boolean;
+    'mikButtonAnimation': boolean;
     'mikButtonColor': string;
     'mikButtonDisabled': boolean;
     'mikButtonIcon': string;
@@ -20,6 +22,7 @@ export namespace Components {
     'mikButtonRadius': boolean;
     'mikButtonSize': string;
     'mikButtonTextAlign': string;
+    'mikButtonVariant': string;
     'mikCustomBgHoverColor': string;
     'mikCustomButtonFontSize': string;
     'mikCustomButtonSize': any;
@@ -92,6 +95,8 @@ declare global {
 declare namespace LocalJSX {
   interface MikButton extends JSXBase.HTMLAttributes<HTMLMikButtonElement> {
     'buttonClick'?: (e: MouseEvent) => void;
+    'mikBoxShadow'?: boolean;
+    'mikButtonAnimation'?: boolean;
     'mikButtonColor'?: string;
     'mikButtonDisabled'?: boolean;
     'mikButtonIcon'?: string;
@@ -101,6 +106,7 @@ declare namespace LocalJSX {
     'mikButtonRadius'?: boolean;
     'mikButtonSize'?: string;
     'mikButtonTextAlign'?: string;
+    'mikButtonVariant'?: string;
     'mikCustomBgHoverColor'?: string;
     'mikCustomButtonFontSize'?: string;
     'mikCustomButtonSize'?: any;

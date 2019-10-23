@@ -16,6 +16,17 @@
 .tertiary:hover {
   background-color: var(--button-bg-hover-tertiary);
 }
+.warning:hover {
+  background-color: var(--button-bg-hover-warning);
+}
+.buttonOutlined {
+  border: 1px solid var(--tertiary-color);
+  background-color: unset;
+  color: var(--tertiary-color);
+}
+.buttonOutlined:hover {
+  background-color: #33caca24;
+}
 
 .small {
   width: var(--small-size-width);
@@ -35,6 +46,20 @@
   font-size: var(--large-size-font-size);
   font-weight: var(--large-size-font-weight);
 }
+.warning {
+  background-color: var(--warning-color);
+}
+button.disabled.mik-button {
+  background-color: var(--disabled-color);
+}
+button.disabled:hover {
+  cursor: unset;
+  background-color: var(--disabled-color);
+}
+.buttonAnimation:hover {
+  transform: scale(1.05);
+  transition: .3s;
+}
 .xl {
   width: var(--xl-size-width);
   height: var(--xl-size-height);
@@ -48,7 +73,12 @@
   font-weight: var(--xxl-size-font-weight);
 }
 
-.is-radius {
+.boxShadow {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+  box-sizing: border-box;
+}
+
+.mik-button.is-radius {
   border-radius: 20px;
 }
 
@@ -65,6 +95,7 @@ button {
   color: white;
   font-family: var(--font-family-default);
   outline: none;
+  border-radius: 5px;
 }
 
 .withButtonIcon-xxl span,

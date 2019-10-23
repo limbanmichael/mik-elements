@@ -7,6 +7,7 @@ import { Component, Prop, h, Event, EventEmitter, Element } from '@stencil/core'
 })
 
 export class MikButton {
+    @Prop() mikButtonVariant = '';
     @Prop() mikButtonColor: string;
     @Prop() mikButtonDisabled: boolean;
     @Prop() mikButtonTextAlign: string;
@@ -23,6 +24,9 @@ export class MikButton {
     @Prop() mikCustomButtonTextColor: string;
     @Prop() mikCustomBgHoverColor: string;
     @Prop() mikCustomButtonFontSize: string;
+
+    @Prop() mikButtonAnimation = false;
+    @Prop() mikBoxShadow = true
 
     @Prop() buttonClick: (e: MouseEvent) => void;
     @Event() mikButtonClick: EventEmitter;
@@ -45,6 +49,10 @@ export class MikButton {
             .style.setProperty('--custom-button-font-size', this.mikCustomButtonFontSize);
     }
 
+    checkBool() {
+        return 'something';
+    }
+
     render() {
         // console.log('butt0n render');
         
@@ -52,8 +60,8 @@ export class MikButton {
         let customHeight = '';
         let customTextColor = '';
         let customFontSize = '';
-
-        let customHoverBgColorClass
+        let customHoverBgColorClass = '';
+        let buttonDisabled = '';
         
         if (this.mikCustomButtonSize === undefined) {
             customHeight = '';
@@ -67,6 +75,9 @@ export class MikButton {
         }
         if (this.mikCustomButtonFontSize) {
             customFontSize = 'custom-font-size';
+        }
+        if (this.mikButtonDisabled) {
+            buttonDisabled = 'disabled';
         }
 
         let style = {
@@ -94,46 +105,72 @@ export class MikButton {
             customHoverBgColorClass = 'custom-hover-bg';
         }
 
-        const rootClass = {
-            primary: this.mikButtonColor.toLowerCase() === 'primary',
-            secondary: this.mikButtonColor.toLowerCase() === 'secondary',
-            tertiary: this.mikButtonColor.toLowerCase() === 'tertiary',
-            // disable: this.mikButtonDisabled == true
-        };
-        const buttonSize = {
-            small: this.mikButtonSize.toLowerCase() === 'small',
-            medium: this.mikButtonSize.toLowerCase() === 'medium',
-            large: this.mikButtonSize.toLowerCase() === 'large',
-            xl: this.mikButtonSize.toLowerCase() === 'xl',
-            xxl: this.mikButtonSize.toLowerCase() === 'xxl'
-        };
+        // const buttonColor = {
+        //     primary: this.mikButtonColor.toLowerCase() === 'primary',
+        //     secondary: this.mikButtonColor.toLowerCase() === 'secondary',
+        //     tertiary: this.mikButtonColor.toLowerCase() === 'tertiary'
+        // };
+        // const buttonSize = {
+        //     small: this.mikButtonSize.toLowerCase() === 'small',
+        //     medium: this.mikButtonSize.toLowerCase() === 'medium',
+        //     large: this.mikButtonSize.toLowerCase() === 'large',
+        //     xl: this.mikButtonSize.toLowerCase() === 'xl',
+        //     xxl: this.mikButtonSize.toLowerCase() === 'xxl'
+        // };
         const buttonIcon = {
             withButtonIcon: this.mikButtonIcon !== undefined,
         };
 
-        const buttonSizeAsArray = Object.keys(buttonSize)
-        const activeButtonSize = buttonSizeAsArray.filter(s => buttonSize[s]);
+        // const buttonSizeAsArray = Object.keys(buttonSize)
+        // const activeButtonSize = buttonSizeAsArray.filter(s => buttonSize[s]);
 
-        const rootClassAsArray = Object.keys(rootClass);
-        const activeRootClass = rootClassAsArray.filter(r => rootClass[r]);
+        // const buttonClassAsArray = Object.keys(buttonColor);
+        // const activeButtonClass = buttonClassAsArray.filter(r => buttonColor[r]);
 
         const buttonIconAsArray = Object.keys(buttonIcon);
         let activeButtonIcon = buttonIconAsArray.filter(r => buttonIcon[r]);
         const buttonIconClass = `${activeButtonIcon}-${this.mikButtonSize}`;
 
-        const wholeClass = `mik-button ${activeButtonSize} ${activeRootClass} \
-        ${isMikButtonRadius} ${customHoverBgColorClass} ${customFontSize} ${buttonIconClass}`;
+        // const wholeClass = `mik-button ${activeButtonSize} ${activeButtonClass} \
+        // ${isMikButtonRadius} ${customHoverBgColorClass} ${customFontSize} \
+        // ${buttonIconClass} ${buttonDisabled}`;
 
-        // console.log(activeButtonIcon, ' styles element');
+        let rootClass = {
+            'mik-button': true,
+            small: this.mikButtonSize.toLowerCase() === 'small' ? true : false,
+            medium: this.mikButtonSize.toLowerCase() === 'medium' ? true : false,
+            large: this.mikButtonSize.toLowerCase() === 'large' ? true : false,
+            xl: this.mikButtonSize.toLowerCase() === 'xl' ? true : false,
+            xxl: this.mikButtonSize.toLowerCase() === 'xxl' ? true : false,
+            primary: this.mikButtonColor.toLowerCase() === 'primary' ? true : false,
+            secondary: this.mikButtonColor.toLowerCase() === 'secondary' ? true : false,
+            tertiary: this.mikButtonColor.toLowerCase() === 'tertiary' ? true : false,
+            warning: this.mikButtonColor.toLowerCase() === 'warning' ? true : false,
+            buttonAnimation: this.mikButtonAnimation,
+            buttonOutlined: this.mikButtonVariant.toLowerCase() === 'outlined' ? true : false,
+            boxShadow: this.mikBoxShadow
+        };
+        rootClass[isMikButtonRadius] = isMikButtonRadius ? true : false;
+        rootClass[customHoverBgColorClass] = customHoverBgColorClass ? true : false;
+        rootClass[customFontSize] = customFontSize ? true : false;
+        rootClass[buttonIconClass] = buttonIconClass ? true : false;
+        rootClass[buttonDisabled] = buttonDisabled ? true : false;
+
+        if (rootClass.buttonOutlined) {
+            rootClass.boxShadow = false;
+        }
+
+        console.log(rootClass, ' styles element');
 
         return (
             <button 
                 style={style}
-                class={wholeClass} 
+                // class={wholeClass}
+                class={rootClass} 
                 onClick={this.onClickMikButton.bind(this)}
                 disabled={this.mikButtonDisabled}
             >
-                {this.mikButtonIcon ?
+                {this.mikButtonIcon && rootClass.buttonOutlined === false ?
                     <mik-icon
                         mikIconClassButtonSize={this.mikButtonSize}
                         mikIcon={this.mikButtonIcon}
