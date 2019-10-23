@@ -11,6 +11,7 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 export namespace Components {
   interface MikButton {
     'buttonClick': (e: MouseEvent) => void;
+    'mikBoxShadow': boolean;
     'mikButtonAnimation': boolean;
     'mikButtonColor': string;
     'mikButtonDisabled': boolean;
@@ -94,6 +95,7 @@ declare global {
 declare namespace LocalJSX {
   interface MikButton extends JSXBase.HTMLAttributes<HTMLMikButtonElement> {
     'buttonClick'?: (e: MouseEvent) => void;
+    'mikBoxShadow'?: boolean;
     'mikButtonAnimation'?: boolean;
     'mikButtonColor'?: string;
     'mikButtonDisabled'?: boolean;
