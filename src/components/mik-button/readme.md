@@ -10,6 +10,8 @@
 | Property                   | Attribute                      | Description | Type                      | Default     |
 | -------------------------- | ------------------------------ | ----------- | ------------------------- | ----------- |
 | `buttonClick`              | --                             |             | `(e: MouseEvent) => void` | `undefined` |
+| `mikBoxShadow`             | `mik-box-shadow`               |             | `boolean`                 | `true`      |
+| `mikButtonAnimation`       | `mik-button-animation`         |             | `boolean`                 | `false`     |
 | `mikButtonColor`           | `mik-button-color`             |             | `string`                  | `undefined` |
 | `mikButtonDisabled`        | `mik-button-disabled`          |             | `boolean`                 | `undefined` |
 | `mikButtonIcon`            | `mik-button-icon`              |             | `string`                  | `undefined` |
@@ -19,6 +21,7 @@
 | `mikButtonRadius`          | `mik-button-radius`            |             | `boolean`                 | `undefined` |
 | `mikButtonSize`            | `mik-button-size`              |             | `string`                  | `undefined` |
 | `mikButtonTextAlign`       | `mik-button-text-align`        |             | `string`                  | `undefined` |
+| `mikButtonVariant`         | `mik-button-variant`           |             | `string`                  | `''`        |
 | `mikCustomBgHoverColor`    | `mik-custom-bg-hover-color`    |             | `string`                  | `undefined` |
 | `mikCustomButtonFontSize`  | `mik-custom-button-font-size`  |             | `string`                  | `undefined` |
 | `mikCustomButtonSize`      | `mik-custom-button-size`       |             | `any`                     | `undefined` |
