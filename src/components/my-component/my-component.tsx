@@ -276,6 +276,25 @@ export class MyComponent {
         >
           No Shadow
         </mik-button>
+        <br /><br /><br />
+        <mik-button
+          mikButtonSize="xxl"
+          buttonClick={this.testButton}
+          mikButtonIcon="photo_camera"
+          mikIconOnly={true}
+          mikIconOnlyColor="#e2b40b"
+        >
+          Icon Only
+        </mik-button>
+        <mik-button
+          mikButtonSize="xxl"
+          buttonClick={this.testButton}
+          mikButtonIcon="photo_camera"
+          mikIconOnly={true}
+          mikIconOnlyColor="#2fa272"
+        >
+          Icon Only
+        </mik-button>
 
 
         <br /><br /><br />

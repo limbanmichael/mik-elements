@@ -18,6 +18,19 @@
 .material-icons.icon-custom-color {
   color: var(--mik-icon-custom-color);
 }
+span.material-icons.iconOnlyColor {
+  padding: 10px;
+  border-radius: 50%;
+}
+span.material-icons.iconOnly {
+  padding: 10px;
+  border-radius: 50%;
+}
+span.material-icons.iconOnly:hover {
+  padding: 10px;
+  background-color: var(--mik-icon-only-color);
+  border-radius: 50%;
+}
 .primary {
   color: var(--primary-color);
 }

@@ -14,6 +14,8 @@ export class MikIcon {
     @Prop() mikIconIndentLeft: string;
     @Prop() mikIconIndentTop: string;
     @Prop() mikIconClassButtonSize: string;
+    @Prop() iconOnlyColor = '';
+    @Prop() iconOnly = false;
 
     componentDidLoad() {
         this.el.shadowRoot.querySelector('span')
@@ -25,6 +27,14 @@ export class MikIcon {
     }
 
     render() {
+        console.log(this.iconOnly, ' custom color');
+        let iconOnlyColor = false;
+        if (this.iconOnlyColor !== '#74777733') {
+            iconOnlyColor = true;
+        }
+        // if (this.iconOnly) {
+        //     this.mikIconCustomColor = null;
+        // }
         const rootClassNames = {
             'mik-icon': true,
             'material-icons': true,
@@ -41,7 +51,9 @@ export class MikIcon {
             medium: this.mikIconClassButtonSize === 'medium',
             large: this.mikIconClassButtonSize === 'large',
             xl: this.mikIconClassButtonSize === 'xl',
-            xxl: this.mikIconClassButtonSize === 'xxl'
+            xxl: this.mikIconClassButtonSize === 'xxl',
+            iconOnlyColor: iconOnlyColor,
+            iconOnly: this.iconOnly
         };
 
         return (
