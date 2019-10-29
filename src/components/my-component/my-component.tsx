@@ -327,7 +327,7 @@ export class MyComponent {
           buttonClick={this.testButton}
           mikButtonIcon="photo_camera"
           mikIconOnly={true}
-          mikButtonIconCustomColor="#2fa272"
+          mikButtonIconCustomColor="#00cc00"
         >
           Icon Only
         </mik-button>
@@ -336,7 +336,7 @@ export class MyComponent {
           buttonClick={this.testButton}
           mikButtonIcon="photo_camera"
           mikIconOnly={true}
-          mikButtonIconCustomColor="#2fa272"
+          mikButtonIconCustomColor="#00cc00"
         >
           Icon Only
         </mik-button>
@@ -345,7 +345,7 @@ export class MyComponent {
           buttonClick={this.testButton}
           mikButtonIcon="photo_camera"
           mikIconOnly={true}
-          mikButtonIconCustomColor="#2fa272"
+          mikButtonIconCustomColor="#1800fc"
         >
           Icon Only
         </mik-button>
@@ -354,7 +354,7 @@ export class MyComponent {
           buttonClick={this.testButton}
           mikButtonIcon="photo_camera"
           mikIconOnly={true}
-          mikButtonIconCustomColor="#2fa272"
+          mikButtonIconCustomColor="#1800fc"
         >
           Icon Only
         </mik-button>

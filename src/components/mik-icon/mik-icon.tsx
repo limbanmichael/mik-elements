@@ -33,7 +33,6 @@ export class MikIcon {
 
     render() {
         let iconOnlySize = this.mikIconOnlySize.toLowerCase();
-        console.log(iconOnlySize, ' icon only size');
         
         if (this.mikIconCustomColor) {
             this.iconOnlyHoverColor = `${this.mikIconCustomColor}33`;
@@ -41,6 +40,10 @@ export class MikIcon {
         if (!iconOnlySize) {
             iconOnlySize = 'small';
         }
+        if (!this.iconOnly) {
+            iconOnlySize = '';
+        }
+
         const rootClassNames = {
             'mik-icon': true,
             'material-icons': true,

@@ -149,8 +149,6 @@ export class MikButton {
             rootClass.iconOnly = true;
         }
 
-        // this.mikIconOnlyColor = `${this.mikIconOnlyColor}33`;
-
         return (
             <button 
                 style={style}
