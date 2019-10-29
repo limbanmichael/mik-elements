@@ -28,7 +28,7 @@ export namespace Components {
     'mikCustomButtonSize': any;
     'mikCustomButtonTextColor': string;
     'mikIconOnly': boolean;
-    'mikIconOnlyColor': string;
+    'mikIconOnlySize': string;
   }
   interface MikCard {
     'mikCardAuthor': string;
@@ -39,13 +39,13 @@ export namespace Components {
   }
   interface MikIcon {
     'iconOnly': boolean;
-    'iconOnlyColor': string;
     'mikIcon': string;
     'mikIconClassButtonSize': string;
     'mikIconColor': string;
     'mikIconCustomColor': string;
     'mikIconIndentLeft': string;
     'mikIconIndentTop': string;
+    'mikIconOnlySize': string;
   }
   interface MikStepper {
     'stepWidth': string;
@@ -116,7 +116,7 @@ declare namespace LocalJSX {
     'mikCustomButtonSize'?: any;
     'mikCustomButtonTextColor'?: string;
     'mikIconOnly'?: boolean;
-    'mikIconOnlyColor'?: string;
+    'mikIconOnlySize'?: string;
     'onMikButtonClick'?: (event: CustomEvent<any>) => void;
   }
   interface MikCard extends JSXBase.HTMLAttributes<HTMLMikCardElement> {
@@ -128,13 +128,13 @@ declare namespace LocalJSX {
   }
   interface MikIcon extends JSXBase.HTMLAttributes<HTMLMikIconElement> {
     'iconOnly'?: boolean;
-    'iconOnlyColor'?: string;
     'mikIcon'?: string;
     'mikIconClassButtonSize'?: string;
     'mikIconColor'?: string;
     'mikIconCustomColor'?: string;
     'mikIconIndentLeft'?: string;
     'mikIconIndentTop'?: string;
+    'mikIconOnlySize'?: string;
   }
   interface MikStepper extends JSXBase.HTMLAttributes<HTMLMikStepperElement> {
     'stepWidth'?: string;

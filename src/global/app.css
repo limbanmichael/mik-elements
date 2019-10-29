@@ -10,7 +10,7 @@
   --custom-hover-bg: red;
   --custom-button-font-size: 0px;
     /* button icon only */
-  --mik-icon-only-color: #33caca;
+  --mik-icon-only-hover-color: #33caca;
     /* mik icon */
   --mik-icon-custom-color: #000000;
   --mik-icon-custom-indent-left: 3px;

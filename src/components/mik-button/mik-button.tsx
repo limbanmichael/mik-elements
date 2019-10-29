@@ -29,7 +29,7 @@ export class MikButton {
     @Prop() mikBoxShadow = true
 
     @Prop() mikIconOnly = false;
-    @Prop() mikIconOnlyColor = '#747777';
+    @Prop() mikIconOnlySize = '';
 
     @Prop() buttonClick: (e: MouseEvent) => void;
     @Event() mikButtonClick: EventEmitter;
@@ -50,8 +50,6 @@ export class MikButton {
             .style.setProperty('--custom-hover-bg', this.mikCustomBgHoverColor);
         this.el.shadowRoot.querySelector('button')
             .style.setProperty('--custom-button-font-size', this.mikCustomButtonFontSize);
-        this.el.shadowRoot.querySelector('button')
-            .style.setProperty('--mik-icon-only-color', this.mikIconOnlyColor);
     }
 
     checkBool() {
@@ -59,7 +57,6 @@ export class MikButton {
     }
 
     render() {
-        // console.log('butt0n render');
         
         let customWidth = '';
         let customHeight = '';
@@ -150,11 +147,9 @@ export class MikButton {
             });
             rootClass.buttonOutlined = false;
             rootClass.iconOnly = true;
-            this.mikButtonIconCustomColor = this.mikIconOnlyColor;
-            console.log(rootClass, ' root class');
         }
 
-        this.mikIconOnlyColor = `${this.mikIconOnlyColor}33`;
+        // this.mikIconOnlyColor = `${this.mikIconOnlyColor}33`;
 
         return (
             <button 
@@ -169,8 +164,8 @@ export class MikButton {
                         mikIcon={this.mikButtonIcon}
                         mikIconCustomColor={this.mikButtonIconCustomColor}
                         mikIconIndentLeft={this.mikButtonIconIndentLeft}
-                        iconOnlyColor={`${this.mikIconOnlyColor}`}
                         iconOnly={this.mikIconOnly}
+                        mikIconOnlySize={this.mikIconOnlySize}
                     >
                     </mik-icon>
                 : ''

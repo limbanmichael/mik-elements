@@ -18,17 +18,15 @@
 .material-icons.icon-custom-color {
   color: var(--mik-icon-custom-color);
 }
-span.material-icons.iconOnlyColor {
-  padding: 10px;
-  border-radius: 50%;
-}
 span.material-icons.iconOnly {
   padding: 10px;
   border-radius: 50%;
+  margin: 0;
+  color: var(--mik-icon-custom-color);
 }
 span.material-icons.iconOnly:hover {
-  padding: 10px;
-  background-color: var(--mik-icon-only-color);
+  /* padding: 10px; */
+  background-color: var(--mik-icon-only-hover-color);
   border-radius: 50%;
 }
 .primary {
@@ -64,4 +62,37 @@ span.material-icons.iconOnly:hover {
     font-size: 17px;
     margin-right: 3px;
     vertical-align: middle;
+}
+span.mik-icon.iconOnlySmallest {
+  font-size: 21px;
+}
+span.mik-icon.iconOnlySmall {
+  font-size: 25px;
+}
+span.mik-icon.iconOnlyMedium {
+  font-size: 30px;
+}
+span.mik-icon.iconOnlyLarge {
+  font-size: 35px;
+  padding: 12px;
+}
+span.mik-icon.iconOnlyXl {
+  font-size: 40px;
+  padding: 12px;
+}
+span.mik-icon.iconOnlyXxl {
+  font-size: 45px;
+  padding: 15px;
+}
+span.mik-icon.iconOnlyXxxl {
+  font-size: 50px;
+  padding: 15px;
+}
+span.mik-icon.iconOnlyX5 {
+  font-size: 55px;
+  padding: 15px;
+}
+span.mik-icon.iconOnlyX6 {
+  font-size: 60px;
+  padding: 20px;
 }

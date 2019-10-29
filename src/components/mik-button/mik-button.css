@@ -107,3 +107,7 @@ button {
     position: relative;
     vertical-align: middle;
 }
+
+.iconOnly {
+  padding: 0;
+}
