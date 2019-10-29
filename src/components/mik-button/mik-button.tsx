@@ -28,6 +28,9 @@ export class MikButton {
     @Prop() mikButtonAnimation = false;
     @Prop() mikBoxShadow = true
 
+    @Prop() mikIconOnly = false;
+    @Prop() mikIconOnlySize = '';
+
     @Prop() buttonClick: (e: MouseEvent) => void;
     @Event() mikButtonClick: EventEmitter;
     @Element() el: HTMLElement;
@@ -54,7 +57,6 @@ export class MikButton {
     }
 
     render() {
-        // console.log('butt0n render');
         
         let customWidth = '';
         let customHeight = '';
@@ -105,35 +107,13 @@ export class MikButton {
             customHoverBgColorClass = 'custom-hover-bg';
         }
 
-        // const buttonColor = {
-        //     primary: this.mikButtonColor.toLowerCase() === 'primary',
-        //     secondary: this.mikButtonColor.toLowerCase() === 'secondary',
-        //     tertiary: this.mikButtonColor.toLowerCase() === 'tertiary'
-        // };
-        // const buttonSize = {
-        //     small: this.mikButtonSize.toLowerCase() === 'small',
-        //     medium: this.mikButtonSize.toLowerCase() === 'medium',
-        //     large: this.mikButtonSize.toLowerCase() === 'large',
-        //     xl: this.mikButtonSize.toLowerCase() === 'xl',
-        //     xxl: this.mikButtonSize.toLowerCase() === 'xxl'
-        // };
         const buttonIcon = {
             withButtonIcon: this.mikButtonIcon !== undefined,
         };
 
-        // const buttonSizeAsArray = Object.keys(buttonSize)
-        // const activeButtonSize = buttonSizeAsArray.filter(s => buttonSize[s]);
-
-        // const buttonClassAsArray = Object.keys(buttonColor);
-        // const activeButtonClass = buttonClassAsArray.filter(r => buttonColor[r]);
-
         const buttonIconAsArray = Object.keys(buttonIcon);
         let activeButtonIcon = buttonIconAsArray.filter(r => buttonIcon[r]);
         const buttonIconClass = `${activeButtonIcon}-${this.mikButtonSize}`;
-
-        // const wholeClass = `mik-button ${activeButtonSize} ${activeButtonClass} \
-        // ${isMikButtonRadius} ${customHoverBgColorClass} ${customFontSize} \
-        // ${buttonIconClass} ${buttonDisabled}`;
 
         let rootClass = {
             'mik-button': true,
@@ -148,7 +128,8 @@ export class MikButton {
             warning: this.mikButtonColor.toLowerCase() === 'warning' ? true : false,
             buttonAnimation: this.mikButtonAnimation,
             buttonOutlined: this.mikButtonVariant.toLowerCase() === 'outlined' ? true : false,
-            boxShadow: this.mikBoxShadow
+            boxShadow: this.mikBoxShadow,
+            iconOnly: this.mikIconOnly
         };
         rootClass[isMikButtonRadius] = isMikButtonRadius ? true : false;
         rootClass[customHoverBgColorClass] = customHoverBgColorClass ? true : false;
@@ -160,12 +141,19 @@ export class MikButton {
             rootClass.boxShadow = false;
         }
 
-        console.log(rootClass, ' styles element');
+        if (this.mikIconOnly) {
+            Object.keys(rootClass).filter(function (k) {
+                rootClass[k] = false;
+            });
+            rootClass.buttonOutlined = false;
+            rootClass.iconOnly = true;
+        }
+
+        // this.mikIconOnlyColor = `${this.mikIconOnlyColor}33`;
 
         return (
             <button 
                 style={style}
-                // class={wholeClass}
                 class={rootClass} 
                 onClick={this.onClickMikButton.bind(this)}
                 disabled={this.mikButtonDisabled}
@@ -176,11 +164,15 @@ export class MikButton {
                         mikIcon={this.mikButtonIcon}
                         mikIconCustomColor={this.mikButtonIconCustomColor}
                         mikIconIndentLeft={this.mikButtonIconIndentLeft}
+                        iconOnly={this.mikIconOnly}
+                        mikIconOnlySize={this.mikIconOnlySize}
                     >
                     </mik-icon>
                 : ''
                 }
-                <span><slot></slot></span>
+                {!this.mikIconOnly?
+                    <span> <slot></slot></span>
+                : ''}
             </button>
         );
     }

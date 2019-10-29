@@ -276,6 +276,88 @@ export class MyComponent {
         >
           No Shadow
         </mik-button>
+        <br /><br /><br />
+        <mik-button
+          mikIconOnlySize="smallest"
+          buttonClick={this.testButton}
+          mikButtonIcon="photo_camera"
+          mikIconOnly={true}
+          mikButtonIconCustomColor="#1800fc"
+        >
+          Icon Only
+        </mik-button>
+        <mik-button
+          mikIconOnlySize="small"
+          buttonClick={this.testButton}
+          mikButtonIcon="photo_camera"
+          mikIconOnly={true}
+          mikButtonIconCustomColor="#1800fc"
+        >
+          Icon Only
+        </mik-button>
+        <mik-button
+          mikIconOnlySize="medium"
+          buttonClick={this.testButton}
+          mikButtonIcon="photo_camera"
+          mikIconOnly={true}
+          mikButtonIconCustomColor="#2fa272"
+        >
+          Icon Only
+        </mik-button>
+        <mik-button
+          mikIconOnlySize="large"
+          buttonClick={this.testButton}
+          mikButtonIcon="photo_camera"
+          mikIconOnly={true}
+          mikButtonIconCustomColor="#d4711c"
+        >
+          Icon Only
+        </mik-button>
+        <mik-button
+          mikIconOnlySize="xl"
+          buttonClick={this.testButton}
+          mikButtonIcon="photo_camera"
+          mikIconOnly={true}
+          mikButtonIconCustomColor="#2fa272"
+        >
+          Icon Only
+        </mik-button>
+        <mik-button
+          mikIconOnlySize="xxl"
+          buttonClick={this.testButton}
+          mikButtonIcon="photo_camera"
+          mikIconOnly={true}
+          mikButtonIconCustomColor="#2fa272"
+        >
+          Icon Only
+        </mik-button>
+        <mik-button
+          mikIconOnlySize="xxxl"
+          buttonClick={this.testButton}
+          mikButtonIcon="photo_camera"
+          mikIconOnly={true}
+          mikButtonIconCustomColor="#2fa272"
+        >
+          Icon Only
+        </mik-button>
+        <mik-button
+          mikIconOnlySize="x5"
+          buttonClick={this.testButton}
+          mikButtonIcon="photo_camera"
+          mikIconOnly={true}
+          mikButtonIconCustomColor="#2fa272"
+        >
+          Icon Only
+        </mik-button>
+        <mik-button
+          mikIconOnlySize="x6"
+          buttonClick={this.testButton}
+          mikButtonIcon="photo_camera"
+          mikIconOnly={true}
+          mikButtonIconCustomColor="#2fa272"
+        >
+          Icon Only
+        </mik-button>
 
 
         <br /><br /><br />
