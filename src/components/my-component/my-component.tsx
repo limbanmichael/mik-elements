@@ -73,6 +73,47 @@ export class MyComponent {
         >
         </mik-card> */}
         <mik-button
+          mikButtonSize="small"
+          mikButtonColor="tertiary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+        >
+          Small
+        </mik-button>
+        <mik-button
+          mikButtonSize="medium"
+          mikButtonColor="tertiary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+        >
+          Medium
+        </mik-button>
+        <mik-button
+          mikButtonSize="large"
+          mikButtonColor="primary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+        >
+          Large
+        </mik-button>
+        <mik-button
+          mikButtonSize="xl"
+          mikButtonColor="secondary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+        >
+          Large
+        </mik-button>
+        <mik-button
+          mikButtonSize="xxl"
+          mikButtonColor="tertiary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+        >
+          XX Large
+        </mik-button>
+        <br/><br/><br/>
+        <mik-button
           mikButtonIcon="edit"
           mikButtonIconCustomColor="white"
           mikButtonIconIndentLeft="3px"
