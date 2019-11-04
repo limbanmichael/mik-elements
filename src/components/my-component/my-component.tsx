@@ -35,6 +35,12 @@ export class MyComponent {
     //   number: 4,
     //   title: 'Finish',
     // },
+    // {
+    //   done: false,
+    //   active: false,
+    //   number: 5,
+    //   title: 'Finish',
+    // }
   ];
 
   testButton = () => {
@@ -66,6 +72,12 @@ export class MyComponent {
     // console.log(this.stepperConfig,  ' style size');
     return (
       <div>
+        <br /><br /><br />
+        <mik-stepper
+          stepperConfig={this.stepperConfig}
+          triggerProp={this.triggerProp}
+        ></mik-stepper>
+        <br /><br /><br />
         {/* <mik-card
           mikCardId="5a6ce86d2af929789500e7ca"
           mikCardAuthor={this.cardAuthor}
@@ -399,14 +411,6 @@ export class MyComponent {
         >
           Icon Only
         </mik-button>
-
-
-        <br /><br /><br />
-        <mik-stepper
-          stepperConfig={this.stepperConfig}
-          triggerProp={this.triggerProp}
-          stepWidth="33%"
-        ></mik-stepper>
 
         {/* <mik-icon 
           mikIcon="insert_chart" 

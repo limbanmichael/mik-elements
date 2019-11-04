@@ -50,17 +50,19 @@
 .stepper-round .stepper-number::after, 
 .stepper-round .stepper-done::after {
     content: '';
-    width: var(--mik-stepper-step-width);
+    /* width: var(--mik-stepper-step-width); */
+    width: calc(var(--mik-stepper-step-width) - 50px);;
     z-index: -1;
     margin-top: 10px;
-    border-bottom: solid 1px #9e9e9e;
+    margin-left: 23px;
+    border-bottom: solid 2px #9e9e9e;
     position: absolute;
 }
 .stepper-round .stepper-number::after {
     margin-top: -10px;
 }
 .stepper-round .stepper-done.done::after {
-    border-bottom: solid 1px #007eff;
+    border-bottom: solid 2px #007eff;
 }
 .stepper-holder:last-child > .stepper-round > .stepper-number::after,
 .stepper-holder:last-child > .stepper-round > .stepper-done::after  {
@@ -73,6 +75,9 @@
     padding: 6px;
     color: white;
     font-size: 20px;
+}
+.stepper-round .stepper-done::after {
+    margin-left: 13px;
 }
 .step-title {
     margin-top: 25px;
