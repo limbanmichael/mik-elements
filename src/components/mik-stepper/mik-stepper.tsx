@@ -10,12 +10,19 @@ export class MikStepper {
     @Prop() stepperConfig: any;
     @Prop() triggerProp = false;
     @State() configMap = [];
-    @Prop() stepWidth: string;
+    stepWidth: string;
     @Element() el: HTMLElement;
 
     componentDidLoad() {
         this.el.shadowRoot.querySelector('div')
             .style.setProperty('--mik-stepper-step-width', this.stepWidth);
+    }
+
+    componentWillLoad() {
+        const configLength = this.stepperConfig.length;
+        const dividedVal = 100 / configLength;
+        this.stepWidth = `${dividedVal}%`
+        console.log(this.stepWidth, ' length');
     }
 
     render() {
