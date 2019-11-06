@@ -48,6 +48,7 @@ export namespace Components {
     'mikIconOnlySize': string;
   }
   interface MikStepper {
+    'stepBgColor': string;
     'stepperConfig': any;
     'triggerProp': boolean;
   }
@@ -136,6 +137,7 @@ declare namespace LocalJSX {
     'mikIconOnlySize'?: string;
   }
   interface MikStepper extends JSXBase.HTMLAttributes<HTMLMikStepperElement> {
+    'stepBgColor'?: string;
     'stepperConfig'?: any;
     'triggerProp'?: boolean;
   }

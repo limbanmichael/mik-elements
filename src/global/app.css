@@ -17,6 +17,7 @@
   --mik-icon-custom-indent-top: 3px;
     /* mik stepper */
   --mik-stepper-step-width: 0px;
+  --mik-stepper-step-bgcolor: #007eff;
 }
 
 @font-face {
@@ -31,8 +32,8 @@ body {
 
     --font-family-default: 'Source Sans Pro', sans-serif;
 
-    --primary-color: #004eff;
-    --button-bg-hover-primary: #004eff7a;
+    --primary-color: #007eff;
+    --button-bg-hover-primary: #007eff7a;
 
     --secondary-color: #00cc00;
     --button-bg-hover-secondary: #00cc008f;

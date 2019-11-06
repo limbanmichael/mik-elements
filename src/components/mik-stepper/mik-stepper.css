@@ -40,7 +40,7 @@
     color: white;
 }
 .stepper-round .stepper-number.active {
-    background-color: #007eff;
+    background-color: var(--mik-stepper-step-bgcolor);
 }
 .stepper-round .stepper-number.active .rotate {
     transition: opacity 4s, transform .4s;
@@ -62,14 +62,14 @@
     margin-top: -10px;
 }
 .stepper-round .stepper-done.done::after {
-    border-bottom: solid 2px #007eff;
+    border-bottom: solid 2px var(--mik-stepper-step-bgcolor);
 }
 .stepper-holder:last-child > .stepper-round > .stepper-number::after,
 .stepper-holder:last-child > .stepper-round > .stepper-done::after  {
     display: none;
 }
 .stepper-round .stepper-done.done {
-    background-color: #007eff;
+    background-color: var(--mik-stepper-step-bgcolor);
     border-radius: 50%;
     width: 20px;
     padding: 6px;
@@ -80,7 +80,9 @@
     margin-left: 13px;
 }
 .step-title {
-    margin-top: 25px;
+    margin-top: 5px;
+    font-weight: 900;
+    font-size: 15px;
 }
 .dash-holder {
     padding-left: 60%;
