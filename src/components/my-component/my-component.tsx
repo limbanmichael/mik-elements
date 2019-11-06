@@ -76,6 +76,7 @@ export class MyComponent {
         <mik-stepper
           stepperConfig={this.stepperConfig}
           triggerProp={this.triggerProp}
+          stepBgColor="PrimarY"
         ></mik-stepper>
         <br /><br /><br />
         {/* <mik-card

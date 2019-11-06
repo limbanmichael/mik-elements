@@ -9,6 +9,7 @@ import { Component, h, Prop, State, Element } from '@stencil/core';
 export class MikStepper {
     @Prop() stepperConfig: any;
     @Prop() triggerProp = false;
+    @Prop() stepBgColor = '';
     @State() configMap = [];
     stepWidth: string;
     @Element() el: HTMLElement;
@@ -16,13 +17,28 @@ export class MikStepper {
     componentDidLoad() {
         this.el.shadowRoot.querySelector('div')
             .style.setProperty('--mik-stepper-step-width', this.stepWidth);
+        this.el.shadowRoot.querySelector('div')
+            .style.setProperty('--mik-stepper-step-bgcolor', this.stepBgColor);
     }
 
     componentWillLoad() {
+        let stepBg = this.stepBgColor.toLowerCase();
         const configLength = this.stepperConfig.length;
         const dividedVal = 100 / configLength;
         this.stepWidth = `${dividedVal}%`
-        console.log(this.stepWidth, ' length');
+
+        if (!stepBg) {
+            stepBg = 'primary';
+        }
+        if (stepBg === 'primary') {
+            this.stepBgColor = '#007eff';
+        }
+        if (stepBg === 'secondary') {
+            this.stepBgColor = '#00cc00';
+        }
+        if (stepBg === 'tertiary') {
+            this.stepBgColor = '#33caca';
+        }
     }
 
     render() {
