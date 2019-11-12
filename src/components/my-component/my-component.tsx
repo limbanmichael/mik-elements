@@ -29,18 +29,18 @@ export class MyComponent {
       number: 3,
       title: 'Update Profile',
     },
-    // {
-    //   done: false,
-    //   active: false,
-    //   number: 4,
-    //   title: 'Finish',
-    // },
-    // {
-    //   done: false,
-    //   active: false,
-    //   number: 5,
-    //   title: 'Finish',
-    // }
+    {
+      done: false,
+      active: false,
+      number: 4,
+      title: 'Finish',
+    },
+    {
+      done: false,
+      active: false,
+      number: 5,
+      title: 'Finish',
+    }
   ];
 
   testButton = () => {
@@ -65,13 +65,15 @@ export class MyComponent {
 
 
   render() {
-    const styleSize = {
-      width: '200px',
-      height: '50px'
-    };
-    // console.log(this.stepperConfig,  ' style size');
+    // const styleSize = {
+    //   width: '200px',
+    //   height: '50px'
+    // };
     return (
       <div>
+        <mik-paginate
+          mikPerPageItem={5}
+          mikTotalItems={100}></mik-paginate>
         <br /><br /><br />
         <mik-stepper
           stepperConfig={this.stepperConfig}
@@ -126,7 +128,7 @@ export class MyComponent {
           XX Large
         </mik-button>
         <br/><br/><br/>
-        <mik-button
+        {/* <mik-button
           mikButtonIcon="edit"
           mikButtonIconCustomColor="white"
           mikButtonIconIndentLeft="3px"
@@ -411,7 +413,7 @@ export class MyComponent {
           mikButtonIconCustomColor="#1800fc"
         >
           Icon Only
-        </mik-button>
+        </mik-button> */}
 
         {/* <mik-icon 
           mikIcon="insert_chart" 

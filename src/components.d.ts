@@ -47,6 +47,10 @@ export namespace Components {
     'mikIconIndentTop': string;
     'mikIconOnlySize': string;
   }
+  interface MikPaginate {
+    'mikPerPageItem': number;
+    'mikTotalItems': number;
+  }
   interface MikStepper {
     'stepBgColor': string;
     'stepperConfig': any;
@@ -76,6 +80,12 @@ declare global {
     new (): HTMLMikIconElement;
   };
 
+  interface HTMLMikPaginateElement extends Components.MikPaginate, HTMLStencilElement {}
+  var HTMLMikPaginateElement: {
+    prototype: HTMLMikPaginateElement;
+    new (): HTMLMikPaginateElement;
+  };
+
   interface HTMLMikStepperElement extends Components.MikStepper, HTMLStencilElement {}
   var HTMLMikStepperElement: {
     prototype: HTMLMikStepperElement;
@@ -91,6 +101,7 @@ declare global {
     'mik-button': HTMLMikButtonElement;
     'mik-card': HTMLMikCardElement;
     'mik-icon': HTMLMikIconElement;
+    'mik-paginate': HTMLMikPaginateElement;
     'mik-stepper': HTMLMikStepperElement;
     'my-component': HTMLMyComponentElement;
   }
@@ -136,6 +147,10 @@ declare namespace LocalJSX {
     'mikIconIndentTop'?: string;
     'mikIconOnlySize'?: string;
   }
+  interface MikPaginate extends JSXBase.HTMLAttributes<HTMLMikPaginateElement> {
+    'mikPerPageItem'?: number;
+    'mikTotalItems'?: number;
+  }
   interface MikStepper extends JSXBase.HTMLAttributes<HTMLMikStepperElement> {
     'stepBgColor'?: string;
     'stepperConfig'?: any;
@@ -147,6 +162,7 @@ declare namespace LocalJSX {
     'mik-button': MikButton;
     'mik-card': MikCard;
     'mik-icon': MikIcon;
+    'mik-paginate': MikPaginate;
     'mik-stepper': MikStepper;
     'my-component': MyComponent;
   }
