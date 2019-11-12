@@ -73,6 +73,7 @@ export class MyComponent {
       <div>
         <mik-paginate
           mikPerPageItem={5}
+          page-active
           mikTotalItems={100}></mik-paginate>
         <br /><br /><br />
         <mik-stepper

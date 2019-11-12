@@ -2,7 +2,7 @@ div {
     display: flex;
 }
 
-.pageNav {
+.pageNav, .pageNavStart, .pageNavEnd, .pageNavDot {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,7 @@ div {
     color: var(--primary-color);
 }
 
-.pageNav.dotSeparator {
+.pageNavDot.dotSeparator {
     border-style: unset;
 }
 

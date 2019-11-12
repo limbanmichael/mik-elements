@@ -50,6 +50,7 @@ export namespace Components {
   interface MikPaginate {
     'mikPerPageItem': number;
     'mikTotalItems': number;
+    'pageActive': number;
   }
   interface MikStepper {
     'stepBgColor': string;
@@ -150,6 +151,7 @@ declare namespace LocalJSX {
   interface MikPaginate extends JSXBase.HTMLAttributes<HTMLMikPaginateElement> {
     'mikPerPageItem'?: number;
     'mikTotalItems'?: number;
+    'pageActive'?: number;
   }
   interface MikStepper extends JSXBase.HTMLAttributes<HTMLMikStepperElement> {
     'stepBgColor'?: string;

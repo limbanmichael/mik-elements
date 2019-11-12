@@ -19,9 +19,11 @@ export class MikPaginate {
     @State() activeIndex = 1;
     @State() visiblePages = [];
     @Element() el: HTMLElement;
+    @Prop({reflect: true}) pageActive: number;
 
     componentDidLoad() {
         this.setActivePage();
+        this.pageActive = 20;
     }
 
     setActivePage() {
@@ -31,9 +33,9 @@ export class MikPaginate {
         }
 
         if (this.activeIndex < 1) this.activeIndex = 1;
-        const qSelector = `.page-parent .pageNav:nth-of-type(${this.activeIndex + 1})`;
-        this.el.shadowRoot.querySelector(qSelector).classList.add('active');
-        console.log(this.hideFirstPageButton, ' first page');
+        elem[this.activeIndex].classList.add('active');
+        console.log(this.activeIndex, ' active index');
+        console.log(elem, ' elem');
         
     }
 
@@ -116,23 +118,15 @@ export class MikPaginate {
             <div class="page-parent">
                 {!this.hideFirstPageButton
                 ?<div 
-                    class="pageNav"
+                    class="pageNavStart"
                     onClick={() => this.firstOrLastIndexClick('first')}
                     >1</div>
                 : ''
                 }
                 {!this.hideFirstPageButton
-                    ?<div class="dotSeparator pageNav">...</div>
+                    ?<div class="dotSeparator pageNavDot">...</div>
                     : ''
                 }
-
-                {/* {this.viewFirstPageButtonOnFirstLoad ?
-                    <div
-                        class="pageNav"
-                        onClick={() => this.firstOrLastIndexClick('first')}
-                    >1</div>
-                    : '' */}
-                {/* } */}
 
 
                 {this.visiblePages.map((page, index) =>
@@ -144,12 +138,12 @@ export class MikPaginate {
 
 
                 {!this.hideLastPageButton
-                    ?<div class="dotSeparator pageNav">...</div>
+                    ?<div class="dotSeparator pageNavDot">...</div>
                     : ''
                 }
                 {!this.hideLastPageButton
                     ?<div
-                        class="pageNav"
+                        class="pageNavEnd"
                         onClick={() => this.firstOrLastIndexClick('last')}
                     >{this.totalPageButton}</div>
                     : ''
