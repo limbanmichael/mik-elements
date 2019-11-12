@@ -33,9 +33,18 @@ export class MikPaginate {
         }
 
         if (this.activeIndex < 1) this.activeIndex = 1;
+
+        if (!this.hideLastPageButton && !this.hideFirstPageButton) {
+            this.activeIndex = this.activeIndex - 1;
+        } 
+        // else if (this.hideFirstPageButton && !this.hideLastPageButton) {
+        //     this.activeIndex = this.activeIndex - 1;
+        // }
+
+
         elem[this.activeIndex].classList.add('active');
         console.log(this.activeIndex, ' active index');
-        console.log(elem, ' elem');
+        // console.log(elem[this.activeIndex], ' elem');
         
     }
 
@@ -68,26 +77,24 @@ export class MikPaginate {
 
     triggerPage(clickPage, index) {
         this.viewFirstPageButtonOnFirstLoad = false;
-        console.log(index, ' index');
+        // console.log(index, ' index');
         this.activeIndex = index;
-        this.setActivePage();
         const last = this.visiblePages.length - 1;
         const lastEl = this.visiblePages[last];
         const first = this.visiblePages[0];
         if (clickPage === lastEl && clickPage < this.totalPageButton - 1) {
             this.changeVisiblePager('last');
             this.hideFirstPageButton = false;
-            this.activeIndex = this.activeIndex - 1;
         }
         if (clickPage === first && clickPage > 2) {
             this.changeVisiblePager('first');
             this.hideLastPageButton = false;
         }
+        this.setActivePage();
     }
 
     changeVisiblePager(ind) {
         this.visiblePages = this.visiblePages.map(p => {
-            console.log(this.totalPageButton, 'mid page');
             if (p === 1) ind = 'last';
             if (ind === 'last') return p + 1;
             if (ind === 'first') return p - 1;
