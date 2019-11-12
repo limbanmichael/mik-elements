@@ -32,8 +32,6 @@ export class MikPaginate {
             element.classList.remove('active');
         }
 
-        // if (this.activeIndex < 1) this.activeIndex = 1;
-
         if (!this.hideLastPageButton && !this.hideFirstPageButton) {
             this.activeIndex = this.activeIndex - 1;
             if (this.activeIndex < 1) this.activeIndex = 1;
@@ -42,8 +40,15 @@ export class MikPaginate {
 
         elem[this.activeIndex].classList.add('active');
         console.log(this.activeIndex, ' active index');
-        // console.log(elem[this.activeIndex], ' elem');
         
+    }
+
+    setActiveMid() {
+        const elem = Array.from(this.el.shadowRoot.querySelectorAll(".pageNav"));
+        for (let element of elem) {
+            element.classList.remove('active');
+        }
+        elem[this.activeIndex].classList.add('active');
     }
 
     iteratePager() {
@@ -82,12 +87,15 @@ export class MikPaginate {
         if (clickPage === lastEl && clickPage < this.totalPageButton - 1) {
             this.changeVisiblePager('last');
             this.hideFirstPageButton = false;
-        }
-        if (clickPage === first && clickPage > 2) {
+            this.setActivePage();
+        } else if (clickPage === first && clickPage > 2) {
             this.changeVisiblePager('first');
             this.hideLastPageButton = false;
+            this.setActivePage();
+        } else {
+            console.log(this.activeIndex, 'mid center');
+            this.setActiveMid();
         }
-        this.setActivePage();
     }
 
     changeVisiblePager(ind) {
