@@ -14,6 +14,7 @@ export class MikPaginate {
     totalPageButton
     midEnd
     hideLastPageButton = false;
+    pageEndActive = false;
     @State() hideFirstPageButton = false;
     viewFirstPageButtonOnFirstLoad = true;
     @State() activeIndex = 1;
@@ -47,6 +48,10 @@ export class MikPaginate {
         const elem = Array.from(this.el.shadowRoot.querySelectorAll(".pageNav"));
         for (let element of elem) {
             element.classList.remove('active');
+        }
+        if (this.pageEndActive) {
+            console.log(this.pageEndActive, 'from mid active');
+            console.log(elem, 'from mid active');
         }
         elem[this.activeIndex].classList.add('active');
     }
@@ -115,6 +120,10 @@ export class MikPaginate {
             for(lastFivePages + 1; lastFivePages < this.totalPageButton; lastFivePages++ ) {
                 this.visiblePages.push(lastFivePages + 1);
             }
+            console.log(this.visiblePages, '3');
+            this.pageEndActive = true;
+            this.activeIndex = 4;
+            this.setActiveMid();
         }
         if (i === 'first') {
             this.hideFirstPageButton = true;
@@ -127,6 +136,14 @@ export class MikPaginate {
     }
     
     render() {
+        if (this.pageEndActive) {
+            this.setActiveMid();
+        }
+        console.log('re render');
+        const rootCLassForEnd = {
+            pageNavEnd: true,
+            active: this.pageEndActive
+        }
         return (
             <div class="page-parent">
                 {!this.hideFirstPageButton
@@ -156,7 +173,7 @@ export class MikPaginate {
                 }
                 {!this.hideLastPageButton
                     ?<div
-                        class="pageNavEnd"
+                        class={rootCLassForEnd}
                         onClick={() => this.firstOrLastIndexClick('last')}
                     >{this.totalPageButton}</div>
                     : ''

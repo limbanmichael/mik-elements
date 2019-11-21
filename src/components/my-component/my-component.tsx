@@ -72,7 +72,7 @@ export class MyComponent {
     return (
       <div>
         <mik-paginate
-          mikPerPageItem={5}
+          mikPerPageItem={10}
           page-active
           mikTotalItems={100}></mik-paginate>
         <br /><br /><br />
