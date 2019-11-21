@@ -63,6 +63,10 @@ export class MyComponent {
     this.triggerProp = !this.triggerProp;
   }
 
+  testEmit(i) {
+    console.log(i, ' use emit');
+  }
+
 
   render() {
     // const styleSize = {
@@ -74,6 +78,7 @@ export class MyComponent {
         <mik-paginate
           mikPerPageItem={10}
           page-active
+          onPaginatorChange={this.testEmit.bind(this)}
           mikTotalItems={100}></mik-paginate>
         <br /><br /><br />
         <mik-stepper

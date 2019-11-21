@@ -151,6 +151,7 @@ declare namespace LocalJSX {
   interface MikPaginate extends JSXBase.HTMLAttributes<HTMLMikPaginateElement> {
     'mikPerPageItem'?: number;
     'mikTotalItems'?: number;
+    'onPaginatorChange'?: (event: CustomEvent<any>) => void;
     'pageActive'?: number;
   }
   interface MikStepper extends JSXBase.HTMLAttributes<HTMLMikStepperElement> {

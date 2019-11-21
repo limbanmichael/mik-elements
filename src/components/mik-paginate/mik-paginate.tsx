@@ -1,4 +1,4 @@
-import { Component, State, h, Prop, Element } from '@stencil/core';
+import { Component, State, h, Prop, Event, EventEmitter, Element } from '@stencil/core';
 
 @Component({
     tag: 'mik-paginate',
@@ -21,16 +21,15 @@ export class MikPaginate {
     @State() visiblePages = [];
     eneblaeDidRender = false;
     @Element() el: HTMLElement;
+    @Event() paginatorChange: EventEmitter;
     @Prop({reflect: true}) pageActive: number;
 
     componentDidLoad() {
         this.setActivePage();
-        this.pageActive = 20;
     }
 
     componentDidRender() {
         const elem = Array.from(this.el.shadowRoot.querySelectorAll(".pageNav"));
-        console.log(elem, ' from did load');
         if (this.eneblaeDidRender) {
             for (let element of elem) {
                 element.classList.remove('active');
@@ -41,6 +40,13 @@ export class MikPaginate {
                 elem[0].classList.add('active');
             }
         }
+
+        for (let element of elem) {
+            if (element.classList.contains('active')) {
+                this.pageActive = Number(element.textContent);
+            }
+        }
+        this.paginatorChange.emit(this.pageActive);
     }
 
     setActivePage() {
@@ -157,7 +163,6 @@ export class MikPaginate {
         if (this.pageEndActive) {
             this.setActiveMid();
         }
-        console.log('re render');
         const rootCLassForEnd = {
             pageNavEnd: true,
             active: this.pageEndActive
