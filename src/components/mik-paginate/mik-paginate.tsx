@@ -19,12 +19,28 @@ export class MikPaginate {
     viewFirstPageButtonOnFirstLoad = true;
     @State() activeIndex = 1;
     @State() visiblePages = [];
+    eneblaeDidRender = false;
     @Element() el: HTMLElement;
     @Prop({reflect: true}) pageActive: number;
 
     componentDidLoad() {
         this.setActivePage();
         this.pageActive = 20;
+    }
+
+    componentDidRender() {
+        const elem = Array.from(this.el.shadowRoot.querySelectorAll(".pageNav"));
+        console.log(elem, ' from did load');
+        if (this.eneblaeDidRender) {
+            for (let element of elem) {
+                element.classList.remove('active');
+            }
+            if (this.pageEndActive) {
+                elem[4].classList.add('active');
+            } else {
+                elem[0].classList.add('active');
+            }
+        }
     }
 
     setActivePage() {
@@ -40,7 +56,6 @@ export class MikPaginate {
 
 
         elem[this.activeIndex].classList.add('active');
-        console.log(this.activeIndex, ' active index');
         
     }
 
@@ -48,10 +63,6 @@ export class MikPaginate {
         const elem = Array.from(this.el.shadowRoot.querySelectorAll(".pageNav"));
         for (let element of elem) {
             element.classList.remove('active');
-        }
-        if (this.pageEndActive) {
-            console.log(this.pageEndActive, 'from mid active');
-            console.log(elem, 'from mid active');
         }
         elem[this.activeIndex].classList.add('active');
     }
@@ -84,6 +95,7 @@ export class MikPaginate {
     }
 
     triggerPage(clickPage, index) {
+        this.eneblaeDidRender = false;
         this.viewFirstPageButtonOnFirstLoad = false;
         this.activeIndex = index;
         const last = this.visiblePages.length - 1;
@@ -98,7 +110,6 @@ export class MikPaginate {
             this.hideLastPageButton = false;
             this.setActivePage();
         } else {
-            console.log(this.activeIndex, 'mid center');
             this.setActiveMid();
         }
     }
@@ -114,16 +125,20 @@ export class MikPaginate {
     firstOrLastIndexClick(i) {
         let lastFivePages = this.totalPageButton - 5;
         this.visiblePages = [];
+        const elem = Array.from(this.el.shadowRoot.querySelectorAll(".pageNav"));
+        for (let element of elem) {
+            element.classList.remove('active');
+        }
         if (i === 'last') {
             this.hideLastPageButton = true;
             this.hideFirstPageButton = false;
             for(lastFivePages + 1; lastFivePages < this.totalPageButton; lastFivePages++ ) {
                 this.visiblePages.push(lastFivePages + 1);
             }
-            console.log(this.visiblePages, '3');
             this.pageEndActive = true;
             this.activeIndex = 4;
-            this.setActiveMid();
+            // this.setActiveMid();
+            // elem[6].classList.add('active');
         }
         if (i === 'first') {
             this.hideFirstPageButton = true;
@@ -132,7 +147,10 @@ export class MikPaginate {
             for (let firstFivePages = 0; firstFivePages < 5; firstFivePages++) {
                 this.visiblePages.push(firstFivePages + 1);
             }
+            this.pageEndActive = false;
+            elem[0].classList.add('active');
         }
+        this.eneblaeDidRender = true;
     }
     
     render() {
