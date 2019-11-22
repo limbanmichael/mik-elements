@@ -75,6 +75,11 @@ export class MyComponent {
     // };
     return (
       <div>
+
+      <div>
+          <mik-content-loader loaderVisible={true}></mik-content-loader>
+      </div>
+        <br/><br/><br/>
         <mik-paginate
           mikPerPageItem={10}
           page-active

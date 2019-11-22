@@ -37,6 +37,9 @@ export namespace Components {
     'mikCardImage'?: string;
     'mikCardTitle': string;
   }
+  interface MikContentLoader {
+    'loaderVisible': boolean;
+  }
   interface MikIcon {
     'iconOnly': boolean;
     'mikIcon': string;
@@ -75,6 +78,12 @@ declare global {
     new (): HTMLMikCardElement;
   };
 
+  interface HTMLMikContentLoaderElement extends Components.MikContentLoader, HTMLStencilElement {}
+  var HTMLMikContentLoaderElement: {
+    prototype: HTMLMikContentLoaderElement;
+    new (): HTMLMikContentLoaderElement;
+  };
+
   interface HTMLMikIconElement extends Components.MikIcon, HTMLStencilElement {}
   var HTMLMikIconElement: {
     prototype: HTMLMikIconElement;
@@ -101,6 +110,7 @@ declare global {
   interface HTMLElementTagNameMap {
     'mik-button': HTMLMikButtonElement;
     'mik-card': HTMLMikCardElement;
+    'mik-content-loader': HTMLMikContentLoaderElement;
     'mik-icon': HTMLMikIconElement;
     'mik-paginate': HTMLMikPaginateElement;
     'mik-stepper': HTMLMikStepperElement;
@@ -138,6 +148,9 @@ declare namespace LocalJSX {
     'mikCardImage'?: string;
     'mikCardTitle'?: string;
   }
+  interface MikContentLoader extends JSXBase.HTMLAttributes<HTMLMikContentLoaderElement> {
+    'loaderVisible'?: boolean;
+  }
   interface MikIcon extends JSXBase.HTMLAttributes<HTMLMikIconElement> {
     'iconOnly'?: boolean;
     'mikIcon'?: string;
@@ -164,6 +177,7 @@ declare namespace LocalJSX {
   interface IntrinsicElements {
     'mik-button': MikButton;
     'mik-card': MikCard;
+    'mik-content-loader': MikContentLoader;
     'mik-icon': MikIcon;
     'mik-paginate': MikPaginate;
     'mik-stepper': MikStepper;
