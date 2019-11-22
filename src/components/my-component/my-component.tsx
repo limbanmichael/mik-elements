@@ -78,7 +78,7 @@ export class MyComponent {
         <mik-paginate
           mikPerPageItem={10}
           page-active
-          onPaginatorChange={this.testEmit.bind(this)}
+          onPaginatorChange={this.testEmit}
           mikTotalItems={100}></mik-paginate>
         <br /><br /><br />
         <mik-stepper

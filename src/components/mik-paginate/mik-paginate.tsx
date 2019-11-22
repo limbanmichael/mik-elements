@@ -143,8 +143,6 @@ export class MikPaginate {
             }
             this.pageEndActive = true;
             this.activeIndex = 4;
-            // this.setActiveMid();
-            // elem[6].classList.add('active');
         }
         if (i === 'first') {
             this.hideFirstPageButton = true;
