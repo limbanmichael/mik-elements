@@ -18,7 +18,7 @@ export class MikContentLoader {
                         <div class="loader-content-inner">
                             <div class="loader-content-inner-left animate"></div>
                             <div class="loader-content-inner-right">
-                                <div class="right-child animate"></div>
+                                <div class="right-child animate first"></div>
                                 <div class="right-child animate"></div>
                                 <div class="right-child animate"></div>
                             </div>
