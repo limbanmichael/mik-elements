@@ -29,12 +29,18 @@ export class MyComponent {
       number: 3,
       title: 'Update Profile',
     },
-    // {
-    //   done: false,
-    //   active: false,
-    //   number: 4,
-    //   title: 'Finish',
-    // },
+    {
+      done: false,
+      active: false,
+      number: 4,
+      title: 'Finish',
+    },
+    {
+      done: false,
+      active: false,
+      number: 5,
+      title: 'Finish',
+    }
   ];
 
   testButton = () => {
@@ -57,15 +63,35 @@ export class MyComponent {
     this.triggerProp = !this.triggerProp;
   }
 
+  testEmit(i) {
+    console.log(i, ' use emit');
+  }
+
 
   render() {
-    const styleSize = {
-      width: '200px',
-      height: '50px'
-    };
-    // console.log(this.stepperConfig,  ' style size');
+    // const styleSize = {
+    //   width: '200px',
+    //   height: '50px'
+    // };
     return (
       <div>
+
+      <div>
+          <mik-content-loader loaderVisible={true}></mik-content-loader>
+      </div>
+        <br/><br/><br/>
+        <mik-paginate
+          mikPerPageItem={10}
+          page-active
+          onPaginatorChange={this.testEmit}
+          mikTotalItems={100}></mik-paginate>
+        <br /><br /><br />
+        <mik-stepper
+          stepperConfig={this.stepperConfig}
+          triggerProp={this.triggerProp}
+          stepBgColor="PrimarY"
+        ></mik-stepper>
+        <br /><br /><br />
         {/* <mik-card
           mikCardId="5a6ce86d2af929789500e7ca"
           mikCardAuthor={this.cardAuthor}
@@ -73,6 +99,47 @@ export class MyComponent {
         >
         </mik-card> */}
         <mik-button
+          mikButtonSize="small"
+          mikButtonColor="tertiary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+        >
+          Small
+        </mik-button>
+        <mik-button
+          mikButtonSize="medium"
+          mikButtonColor="tertiary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+        >
+          Medium
+        </mik-button>
+        <mik-button
+          mikButtonSize="large"
+          mikButtonColor="primary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+        >
+          Large
+        </mik-button>
+        <mik-button
+          mikButtonSize="xl"
+          mikButtonColor="secondary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+        >
+          Large
+        </mik-button>
+        <mik-button
+          mikButtonSize="xxl"
+          mikButtonColor="tertiary"
+          buttonClick={this.testButton}
+          mikButtonDisabled={this.buttonDisable}
+        >
+          XX Large
+        </mik-button>
+        <br/><br/><br/>
+        {/* <mik-button
           mikButtonIcon="edit"
           mikButtonIconCustomColor="white"
           mikButtonIconIndentLeft="3px"
@@ -276,14 +343,88 @@ export class MyComponent {
         >
           No Shadow
         </mik-button>
-
-
         <br /><br /><br />
-        <mik-stepper
-          stepperConfig={this.stepperConfig}
-          triggerProp={this.triggerProp}
-          stepWidth="33%"
-        ></mik-stepper>
+        <mik-button
+          mikIconOnlySize="smallest"
+          buttonClick={this.testButton}
+          mikButtonIcon="photo_camera"
+          mikIconOnly={true}
+          mikButtonIconCustomColor="#1800fc"
+        >
+          Icon Only
+        </mik-button>
+        <mik-button
+          mikIconOnlySize="small"
+          buttonClick={this.testButton}
+          mikButtonIcon="photo_camera"
+          mikIconOnly={true}
+          mikButtonIconCustomColor="#1800fc"
+        >
+          Icon Only
+        </mik-button>
+        <mik-button
+          mikIconOnlySize="medium"
+          buttonClick={this.testButton}
+          mikButtonIcon="photo_camera"
+          mikIconOnly={true}
+          mikButtonIconCustomColor="#2fa272"
+        >
+          Icon Only
+        </mik-button>
+        <mik-button
+          mikIconOnlySize="large"
+          buttonClick={this.testButton}
+          mikButtonIcon="photo_camera"
+          mikIconOnly={true}
+          mikButtonIconCustomColor="#d4711c"
+        >
+          Icon Only
+        </mik-button>
+        <mik-button
+          mikIconOnlySize="xl"
+          buttonClick={this.testButton}
+          mikButtonIcon="photo_camera"
+          mikIconOnly={true}
+          mikButtonIconCustomColor="#2fa272"
+        >
+          Icon Only
+        </mik-button>
+        <mik-button
+          mikIconOnlySize="xxl"
+          buttonClick={this.testButton}
+          mikButtonIcon="photo_camera"
+          mikIconOnly={true}
+          mikButtonIconCustomColor="#00cc00"
+        >
+          Icon Only
+        </mik-button>
+        <mik-button
+          mikIconOnlySize="xxxl"
+          buttonClick={this.testButton}
+          mikButtonIcon="photo_camera"
+          mikIconOnly={true}
+          mikButtonIconCustomColor="#00cc00"
+        >
+          Icon Only
+        </mik-button>
+        <mik-button
+          mikIconOnlySize="x5"
+          buttonClick={this.testButton}
+          mikButtonIcon="photo_camera"
+          mikIconOnly={true}
+          mikButtonIconCustomColor="#1800fc"
+        >
+          Icon Only
+        </mik-button>
+        <mik-button
+          mikIconOnlySize="x6"
+          buttonClick={this.testButton}
+          mikButtonIcon="photo_camera"
+          mikIconOnly={true}
+          mikButtonIconCustomColor="#1800fc"
+        >
+          Icon Only
+        </mik-button> */}
 
         {/* <mik-icon 
           mikIcon="insert_chart" 

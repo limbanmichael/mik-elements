@@ -9,12 +9,15 @@
     /* mik-button */
   --custom-hover-bg: red;
   --custom-button-font-size: 0px;
+    /* button icon only */
+  --mik-icon-only-hover-color: #33caca;
     /* mik icon */
   --mik-icon-custom-color: #000000;
   --mik-icon-custom-indent-left: 3px;
   --mik-icon-custom-indent-top: 3px;
     /* mik stepper */
   --mik-stepper-step-width: 0px;
+  --mik-stepper-step-bgcolor: #007eff;
 }
 
 @font-face {
@@ -29,8 +32,8 @@ body {
 
     --font-family-default: 'Source Sans Pro', sans-serif;
 
-    --primary-color: #1800fc;
-    --button-bg-hover-primary: #1800fc87;
+    --primary-color: #007eff;
+    --button-bg-hover-primary: #007eff7a;
 
     --secondary-color: #00cc00;
     --button-bg-hover-secondary: #00cc008f;

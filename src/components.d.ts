@@ -27,6 +27,8 @@ export namespace Components {
     'mikCustomButtonFontSize': string;
     'mikCustomButtonSize': any;
     'mikCustomButtonTextColor': string;
+    'mikIconOnly': boolean;
+    'mikIconOnlySize': string;
   }
   interface MikCard {
     'mikCardAuthor': string;
@@ -35,16 +37,26 @@ export namespace Components {
     'mikCardImage'?: string;
     'mikCardTitle': string;
   }
+  interface MikContentLoader {
+    'loaderVisible': boolean;
+  }
   interface MikIcon {
+    'iconOnly': boolean;
     'mikIcon': string;
     'mikIconClassButtonSize': string;
     'mikIconColor': string;
     'mikIconCustomColor': string;
     'mikIconIndentLeft': string;
     'mikIconIndentTop': string;
+    'mikIconOnlySize': string;
+  }
+  interface MikPaginate {
+    'mikPerPageItem': number;
+    'mikTotalItems': number;
+    'pageActive': number;
   }
   interface MikStepper {
-    'stepWidth': string;
+    'stepBgColor': string;
     'stepperConfig': any;
     'triggerProp': boolean;
   }
@@ -66,10 +78,22 @@ declare global {
     new (): HTMLMikCardElement;
   };
 
+  interface HTMLMikContentLoaderElement extends Components.MikContentLoader, HTMLStencilElement {}
+  var HTMLMikContentLoaderElement: {
+    prototype: HTMLMikContentLoaderElement;
+    new (): HTMLMikContentLoaderElement;
+  };
+
   interface HTMLMikIconElement extends Components.MikIcon, HTMLStencilElement {}
   var HTMLMikIconElement: {
     prototype: HTMLMikIconElement;
     new (): HTMLMikIconElement;
+  };
+
+  interface HTMLMikPaginateElement extends Components.MikPaginate, HTMLStencilElement {}
+  var HTMLMikPaginateElement: {
+    prototype: HTMLMikPaginateElement;
+    new (): HTMLMikPaginateElement;
   };
 
   interface HTMLMikStepperElement extends Components.MikStepper, HTMLStencilElement {}
@@ -86,7 +110,9 @@ declare global {
   interface HTMLElementTagNameMap {
     'mik-button': HTMLMikButtonElement;
     'mik-card': HTMLMikCardElement;
+    'mik-content-loader': HTMLMikContentLoaderElement;
     'mik-icon': HTMLMikIconElement;
+    'mik-paginate': HTMLMikPaginateElement;
     'mik-stepper': HTMLMikStepperElement;
     'my-component': HTMLMyComponentElement;
   }
@@ -111,6 +137,8 @@ declare namespace LocalJSX {
     'mikCustomButtonFontSize'?: string;
     'mikCustomButtonSize'?: any;
     'mikCustomButtonTextColor'?: string;
+    'mikIconOnly'?: boolean;
+    'mikIconOnlySize'?: string;
     'onMikButtonClick'?: (event: CustomEvent<any>) => void;
   }
   interface MikCard extends JSXBase.HTMLAttributes<HTMLMikCardElement> {
@@ -120,16 +148,27 @@ declare namespace LocalJSX {
     'mikCardImage'?: string;
     'mikCardTitle'?: string;
   }
+  interface MikContentLoader extends JSXBase.HTMLAttributes<HTMLMikContentLoaderElement> {
+    'loaderVisible'?: boolean;
+  }
   interface MikIcon extends JSXBase.HTMLAttributes<HTMLMikIconElement> {
+    'iconOnly'?: boolean;
     'mikIcon'?: string;
     'mikIconClassButtonSize'?: string;
     'mikIconColor'?: string;
     'mikIconCustomColor'?: string;
     'mikIconIndentLeft'?: string;
     'mikIconIndentTop'?: string;
+    'mikIconOnlySize'?: string;
+  }
+  interface MikPaginate extends JSXBase.HTMLAttributes<HTMLMikPaginateElement> {
+    'mikPerPageItem'?: number;
+    'mikTotalItems'?: number;
+    'onPaginatorChange'?: (event: CustomEvent<any>) => void;
+    'pageActive'?: number;
   }
   interface MikStepper extends JSXBase.HTMLAttributes<HTMLMikStepperElement> {
-    'stepWidth'?: string;
+    'stepBgColor'?: string;
     'stepperConfig'?: any;
     'triggerProp'?: boolean;
   }
@@ -138,7 +177,9 @@ declare namespace LocalJSX {
   interface IntrinsicElements {
     'mik-button': MikButton;
     'mik-card': MikCard;
+    'mik-content-loader': MikContentLoader;
     'mik-icon': MikIcon;
+    'mik-paginate': MikPaginate;
     'mik-stepper': MikStepper;
     'my-component': MyComponent;
   }
