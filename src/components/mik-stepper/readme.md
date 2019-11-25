@@ -7,10 +7,11 @@
 
 ## Properties
 
-| Property        | Attribute        | Description | Type  | Default     |
-| --------------- | ---------------- | ----------- | ----- | ----------- |
-| `stepperConfig` | `stepper-config` |             | `any` | `undefined` |
-| `triggreProp`   | `triggre-prop`   |             | `any` | `undefined` |
+| Property        | Attribute        | Description | Type      | Default     |
+| --------------- | ---------------- | ----------- | --------- | ----------- |
+| `stepBgColor`   | `step-bg-color`  |             | `string`  | `''`        |
+| `stepperConfig` | `stepper-config` |             | `any`     | `undefined` |
+| `triggerProp`   | `trigger-prop`   |             | `boolean` | `false`     |
 
 
 ## Dependencies

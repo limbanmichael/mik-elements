@@ -7,14 +7,16 @@
 
 ## Properties
 
-| Property                 | Attribute                    | Description | Type     | Default     |
-| ------------------------ | ---------------------------- | ----------- | -------- | ----------- |
-| `mikIcon`                | `mik-icon`                   |             | `string` | `undefined` |
-| `mikIconClassButtonSize` | `mik-icon-class-button-size` |             | `string` | `undefined` |
-| `mikIconColor`           | `mik-icon-color`             |             | `string` | `undefined` |
-| `mikIconCustomColor`     | `mik-icon-custom-color`      |             | `string` | `undefined` |
-| `mikIconIndentLeft`      | `mik-icon-indent-left`       |             | `string` | `undefined` |
-| `mikIconIndentTop`       | `mik-icon-indent-top`        |             | `string` | `undefined` |
+| Property                 | Attribute                    | Description | Type      | Default     |
+| ------------------------ | ---------------------------- | ----------- | --------- | ----------- |
+| `iconOnly`               | `icon-only`                  |             | `boolean` | `false`     |
+| `mikIcon`                | `mik-icon`                   |             | `string`  | `undefined` |
+| `mikIconClassButtonSize` | `mik-icon-class-button-size` |             | `string`  | `undefined` |
+| `mikIconColor`           | `mik-icon-color`             |             | `string`  | `undefined` |
+| `mikIconCustomColor`     | `mik-icon-custom-color`      |             | `string`  | `undefined` |
+| `mikIconIndentLeft`      | `mik-icon-indent-left`       |             | `string`  | `undefined` |
+| `mikIconIndentTop`       | `mik-icon-indent-top`        |             | `string`  | `undefined` |
+| `mikIconOnlySize`        | `mik-icon-only-size`         |             | `string`  | `undefined` |
 
 
 ## Dependencies
